@@ -25,6 +25,6 @@ The following analyses will be conducted on each of the species
 3.4. Identify potential genes under selection
 
 
-## Overall comparison
+## Multi-species comparison
 
-Multi-species comparison
+
