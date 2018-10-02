@@ -11,9 +11,7 @@ Pararge aegeria (Speckled wood)
 
 ### Genome
 
-Downloaded from NCBI to the RFS
-
-https://www.ncbi.nlm.nih.gov/assembly/GCA_900499025.1/?expt_dict=b&utm_expid=.AUTBVZdtRVGcQs7InIDH9A.2&utm_referrer=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fgenome%2F%3Fterm%3Dpararge%2Baegeria
+Downloaded from NCBI to the RFS: [GCA_900499025.1](https://www.ncbi.nlm.nih.gov/assembly/GCA_900499025.1/?expt_dict=b&utm_expid=.AUTBVZdtRVGcQs7InIDH9A.2&utm_referrer=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fgenome%2F%3Fterm%3Dpararge%2Baegeria)
 
 ```
 pwd
