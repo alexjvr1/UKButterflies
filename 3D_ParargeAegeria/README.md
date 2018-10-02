@@ -1,8 +1,12 @@
 # README
 
-### Species: 
+### Species 
 
-Pararge aegeria (Speckled wood) 
+[Pararge aegeria](https://butterfly-conservation.org/butterflies/speckled-wood) (Speckled wood)
+
+[Expanding species from Family: Browns](https://docs.google.com/spreadsheets/d/1G9r50W0VV_ANZ19rIvqZpXWFemy2MW76_iXuyBuCQGA/edit?ts=5bb3681e#gid=0)
+
+Catterpillar foodplants: grasses
 
 ![alt_txt][Parargeaegeria.fig]
 
