@@ -2,25 +2,35 @@
 NERC UK Butterfly project
 
 
-## Pipelines: 
+## Pipeline for Velocity project from raw data to filtered variants: 
 
 The scripts for the final pipeline are outlined below. The scripts are organised in 3 folders within a main folder. 
+
+Use this pipeline by running scripts in the pipeline/ folder in the numbered order. These scripts generate submission scripts for 
+each step that can be submitted to the BlueCrystal p3 queue (i.e. qsub script.sh). 
+
+Inputs for each step should be submitted via the command line. 
+
 
 AJvR_VelocityPipeline 
     
     |
     -----> pipeline  
     
-            This contains all the scripts that generate submission scripts
+            This contains all the scripts that generate submission scripts for BlueCrystal. Options can be specified in the command line. 
     
-    |
-    -----> tools
-    
-   
     |
     -----> wrapper
-    
-    
+        
+            Scripts called by pipeline scripts. Wrapper scripts for generating Queue request and specifying inputs from command line for                the tools to be called.     
+            
+    |
+    -----> tools
+            
+            Scripts of tools or functions used in each step. These are called by the wrapper script
+   
+            
+            
 
 ### 0. Quality control
 
