@@ -4,7 +4,28 @@ NERC UK Butterfly project
 
 ## Pipelines: 
 
-The following analyses will be conducted on each of the species
+The scripts for the final pipeline are outlined below. The scripts are organised in 3 folders within a main folder. 
+
+AJvR_VelocityPipeline 
+    
+    |
+    -----> pipeline  
+    
+            This contains all the scripts that generate submission scripts
+    
+    |
+    -----> tools
+    
+   
+   |
+    -----> wrapper
+    
+
+### 0. Quality control
+
+00_fastqc_raw_modern.sh #Creates a submission script for FastQC on bluecrystal. 
+
+
 
 ### 1. Reference genome
 
