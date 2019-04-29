@@ -11,8 +11,6 @@ each step that can be submitted to the BlueCrystal p3 queue (i.e. qsub script.sh
 
 Inputs for each step should be submitted via the command line. 
 
-
-AJvR_VelocityPipeline 
     
     |
     -----> pipeline  
@@ -34,8 +32,13 @@ AJvR_VelocityPipeline
 
 ### 0. Quality control
 
+*pipeline
+
 00_fastqc_raw_modern.sh #Creates a submission script for FastQC on bluecrystal. 
 
+*wrapper
+
+parallel_fastqc_bcp3.sh
 
 
 ### 1. Reference genome
