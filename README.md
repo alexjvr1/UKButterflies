@@ -17,8 +17,9 @@ AJvR_VelocityPipeline
     -----> tools
     
    
-   |
+    |
     -----> wrapper
+    
     
 
 ### 0. Quality control
