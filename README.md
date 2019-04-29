@@ -32,11 +32,13 @@ Inputs for each step should be submitted via the command line.
 
 ### 0. Quality control
 
-*pipeline
+*pipeline*
 
-00_fastqc_raw_modern.sh #Creates a submission script for FastQC on bluecrystal. 
+00_fastqc_raw_museum.sh
 
-*wrapper
+00_fastqc_raw_modern.sh
+
+*wrapper*
 
 parallel_fastqc_bcp3.sh
 
