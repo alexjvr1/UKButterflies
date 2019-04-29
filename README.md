@@ -32,13 +32,13 @@ Inputs for each step should be submitted via the command line.
 
 ### 0. Quality control
 
-*pipeline*
+    #### *pipeline*
 
 00_fastqc_raw_museum.sh
 
 00_fastqc_raw_modern.sh
 
-*wrapper*
+    #### *wrapper*
 
 parallel_fastqc_bcp3.sh
 
