@@ -30,7 +30,7 @@ Inputs for each step should be submitted via the command line.
             
             
 
-### 0. Quality control
+### 00. Quality control
 
    #### *pipeline*
 
@@ -43,12 +43,34 @@ Inputs for each step should be submitted via the command line.
 parallel_fastqc_bcp3.sh
 
 
-### 1. Reference genome
+
+### 01. Trimming adapter and poor quality sequence
+
+#### *pipeline*
+
+With cutadapt we're removing all sequences that are shorter than 20bp and 3' quality trimmed to remove bases with PHRED quality score of < 20. 
+
+
+01a_museum_cutadapt_filtering_trimming.sh
+
+01a_modern_cutadapt_filtering_trimming.sh
+
+01b_museum_trimmomatic_filtering_trimming.sh
+
+01b_modern_trimmomatic_filtering_trimming.sh
+
+
+#### *wrapper*
+
+
+01a_parallel_cutadapt_bluecp3.sh
 
 
 ### 2. Raw data to SNPs
 
 2.1. Demultiplex 
+
+
 
 
 ### 3. Analyses
@@ -60,6 +82,8 @@ parallel_fastqc_bcp3.sh
 3.3. Order outliers in genome
 
 3.4. Identify potential genes under selection
+
+
 
 
 ## Multi-species comparison
