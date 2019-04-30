@@ -66,9 +66,42 @@ With cutadapt we're removing all sequences that are shorter than 20bp and 3' qua
 01a_parallel_cutadapt_bluecp3.sh
 
 
+
+### 02. Map to reference genome with BWA mem
+
+```
+#It is more efficient to run this code in local directory before submitting to queue
+
+#index reference genome
+module load apps/bwa-0.7.15
+bwa index RefGenome/*fasta
+
+#Create files with input names
+ls 01a_museum_cutadapt_reads/*R1*fastq.gz >> R1.museum.names
+sed -i s:01a_museum_cutadapt_reads/::g R1.museum.names
+
+ls 01a_museum_cutadapt_reads/*R2*fastq.gz >> R2.museum.names
+sed -i s:01a_museum_cutadapt_reads/::g R2.museum.names
+
+#make output directories
+mkdir 02a_museum_mapped
+mkdir 02a_modern_mapped
+```
+
+
+#### *pipeline*
+
+02_MapwithBWAmem.ARRAY_museum.sh
+
+02_MapwithBWAmem.ARRAY_modern.sh
+
+
+
 ### 2. Raw data to SNPs
 
 2.1. Demultiplex 
+
+
 
 
 
