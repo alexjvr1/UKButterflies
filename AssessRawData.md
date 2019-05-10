@@ -1,5 +1,6 @@
 # Assessment of Raw data
 
+
 ## MuseumI
 
 Sequenced 8 lanes (1 species per lane) at the CGR in Liverpool. 
@@ -91,3 +92,15 @@ ggplot(MusI.tot, aes(SampleDate, y=Species)) + geom_point()
 ![alt_txt][samplingDates.musi]
 
 [samplingDates.musi]:https://user-images.githubusercontent.com/12142475/53578296-4c5bbd00-3b6f-11e9-8459-51447d87016c.png
+
+
+
+## Choosing samples for resequencing
+
+### May 2019
+
+As the museum sample sequence depth limits the number of variants we can identify with our pipeline, we will resequence a subset of Museum samples for each species. This was trialled with Lymantria and increased the number of variants recovered almost ten fold. 
+
+The choice of individuals will be based on the number of reads mapped per individual. We will target those samples that have mid-level reads as they will more readily be comparable to the well sequenced samples. The poorly sequenced samples will be ignored as we need only 18 individuals per population for confident population genetic analyses. 
+
+
