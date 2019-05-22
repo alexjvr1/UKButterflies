@@ -142,34 +142,26 @@ You'll need to replace 1) the script name 2) the job name in the PBS script, 3) 
 
 Count the number of subset regions files: 
 ```
-ls regions* |wc -l
+ls regions* >> regions.names
+cat regions.names |wc -l
+##remember to keep only the subset regions names in the regions.names file.
 ```
+
+
 
 *1. Create this many copies of the submission script*
 ```
-for i in {1..32}; do cp var_calling.20190211-161117.smsjob.sh "var_calling.20190211-161117.smsjob$i.sh";
+for i in {1..31}; do cp var_calling.20190211-161117.smsjob.sh "var_calling.20190211-161117.smsjob$i.sh";done
 ```
-Where 32 should be replaced by number of regions files. 
+Where 31 should be replaced by number of regions files. 
 
 
 *2-4 Replace the variables in each script*
 
 ```
-paste -d' ' <(awk '{print $1}' regions.names) <(awk '{print $1}' var_calling.names) >> variables.names
-head variables.names
-
-regionsaa var_calling.20190211-161117.smsjob10.sh
-regionsab var_calling.20190211-161117.smsjob11.sh
-regionsac var_calling.20190211-161117.smsjob12.sh
-regionsad var_calling.20190211-161117.smsjob13.sh
-regionsae var_calling.20190211-161117.smsjob14.sh
-regionsaf var_calling.20190211-161117.smsjob15.sh
+for i in $(ls var_calling.20*sh); do while read -r a; do sed -i "s/regions/${a}/" $i; done; done < regions.names
 ```
 
-Use these info to replace
-```
-
-```
 
 
 
