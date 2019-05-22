@@ -228,7 +228,7 @@ Modify the previous script to point to the bcflist.ALL file instead of one of th
 
 
 
-### 04. SNP filtering
+### 03c. SNP filtering
 
 Once we have the raw bcf file, we can look at the data and apply our filters. 
 
@@ -242,16 +242,9 @@ Once we have the raw bcf file, we can look at the data and apply our filters.
 
 
 
-### 2. Raw data to SNPs
-
-2.1. Demultiplex 
 
 
-
-
-
-
-### 3. Analyses
+### 04. Analyses
 
 3.1. Estimate genetic diversity & population structure
 
