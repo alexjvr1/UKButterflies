@@ -232,7 +232,11 @@ Modify the previous script to point to the bcflist.ALL file instead of one of th
 
 Once we have the raw bcf file, we can look at the data and apply our filters. 
 
-Use the [03c_variants_filtering.sh]() script
+Use the [03c_variants_filtering.sh](https://github.com/alexjvr1/UKButterflies/blob/master/03c_variants_filtering.sh) script: Remember to change the variables for the species of interest. 
+
+This script independently filters the museum and modern samples by splitting the bcf file. We have to create a list of museum and modern sample names for each of the datasets. For the expanding triplets we could also create a third population file to represent the expanding populations. For now we're keeping both modern populations together. 
+
+
 
 
 
