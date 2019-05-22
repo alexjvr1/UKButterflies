@@ -196,6 +196,47 @@ Keep an eye on the queue and keep submitting more jobs until all the bcf files h
 
 We can pool about 500 bcffiles at a time, so we're splitting this job up into batches again and then have a final concatenation where we combine sets of 500 bcffiles. 
 
+First move all of the files into a tmp folder
+```
+mkdir tmp
+mv job* tmp/
+```
+
+Make a file listing all of the bcf files. And split this into several files 500 lines long each. 
+
+```
+ls tmp/*bcf >> bcflist
+
+split -l 500 bcflist bcflist.batch
+```
+Rename these from bcflist.batchaa, bcflist.batchab to bcflist.batch1, bcflist.batch2, etc. 
+
+Make sure there is a submission script for each of these batches using [03b_summary_variant_calling_batch2.sh](https://github.com/alexjvr1/UKButterflies/blob/master/03b_summary_variant_calling_batch2.sh) as a template. Remeber to check all the file paths. 
+
+Submit these to queue. 
+
+Check that they're all the expected size, and that all the bcf files were indexed. Once all the OUTF.b.batchxx.bcf files have been created properly, we can concatenate them all together into a final xx.raw.bcf file. 
+
+Make a list of all the interim bcf files
+```
+ls OUTF.*bcf >> bcflist.ALL
+
+```
+
+Modify the previous script to point to the bcflist.ALL file instead of one of the batch files. 
+
+
+
+
+### 04. SNP filtering
+
+Once we have the raw bcf file, we can look at the data and apply our filters. 
+
+
+
+
+
+
 
 
 
