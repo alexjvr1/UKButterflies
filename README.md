@@ -175,6 +175,30 @@ grep
 
 
 
+##### 4. Submit all the scripts
+
+Due to computational limits you can submit only ~6 jobs at a time. 
+
+```
+qsub var_calling.smsjob1.sh
+
+```
+
+Check on the status of the run
+```
+qstat -u bluecrystal.username
+
+```
+Keep an eye on the queue and keep submitting more jobs until all the bcf files have been created. 
+
+
+##### 5. Concatenate all the bcf files
+
+We can pool about 500 bcffiles at a time, so we're splitting this job up into batches again and then have a final concatenation where we combine sets of 500 bcffiles. 
+
+
+
+
 
 
 ### 2. Raw data to SNPs
