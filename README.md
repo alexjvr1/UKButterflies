@@ -232,6 +232,8 @@ Modify the previous script to point to the bcflist.ALL file instead of one of th
 
 Once we have the raw bcf file, we can look at the data and apply our filters. 
 
+Use the [03c_variants_filtering.sh]() script
+
 
 
 
