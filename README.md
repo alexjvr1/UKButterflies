@@ -107,6 +107,26 @@ module load apps/bcftools-1.8
 bcftools view file.bam | head
 ```
 
+
+## Variant calling
+
+After mapping the pipeline will split into 1) variant calling for final vcf with genotypes called for each individual, and 2) using likelihoods associated with variants for downstream analyses. 
+
+
+### 03. Variant calling with samtools and bcftools
+
+We use samtools mpileup to stack all reads for a locus from all individuals in the dataset. The likelihood of a variant at a particular site is determined based on the dataset-wide depth of two alleles. Next an individual genotype likelihood is calculated based on the depth of coverage within that individual. The final output is a vcf file with locus likelihood and depths for each individual's genotype. 
+
+*pipeline*
+
+The variant calling step benefits greatly from the multi-threading and array capabilites on BlueCrystal. We break up the job by calling variants for each genomic region separately. This script will generate a single submission script for the entire dataset which will refer to a newly generated file called "regions" which contains the names of all the genomic regions (contig-xx, scaffold-xx). We have to split this script up because the maximum number of array jobs that we can run for a single script on BlueCrystal is 100.
+
+First generate the submission script and the regions file: 
+
+03a_variant_calling_bluecp3.sh
+
+
+
 ### 2. Raw data to SNPs
 
 2.1. Demultiplex 
