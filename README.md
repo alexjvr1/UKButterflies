@@ -48,7 +48,7 @@ parallel_fastqc_bcp3.sh
 
 #### *pipeline*
 
-With cutadapt we're removing all sequences that are shorter than 20bp and 3' quality trimmed to remove bases with PHRED quality score of < 20. 
+We're removing all sequences that are shorter than 20bp and 3' quality trimmed to remove bases with PHRED quality score of < 20 with Cutadapt.  
 
 
 01a_museum_cutadapt_filtering_trimming.sh
@@ -95,7 +95,17 @@ mkdir 02a_modern_mapped
 
 02_MapwithBWAmem.ARRAY_modern.sh
 
+* Check that everything has mapped correctly by checking the file sizes. If the mapping is cut short (e.g. by exceeding the requested walltime) the partial bam file will look complete and can be indexed. But the bam file size will be small (~500kb) and empty when you look at it. 
 
+```
+#To determine file size
+
+du -sh *bam   
+
+#To see bam file
+module load apps/bcftools-1.8
+bcftools view file.bam | head
+```
 
 ### 2. Raw data to SNPs
 
