@@ -136,12 +136,31 @@ split -l 100 regions regions
 This will generate several files called regionsaa, regionsab.. etc. The number will depend on how fragmented the reference genome is. 
 
 
-###### 3. Create a submission script for each of these regions files. 
+##### 3. Create a submission script for each of these regions files. 
 
-You'll need to replace 1) the job name in the PBS script, 2) the regions file referred to, 3) the job prefix, 4) script name. 
+You'll need to replace 1) the script name 2) the job name in the PBS script, 3) the regions file referred to, 4) the job prefix. 
+
+Count the number of subset regions files: 
+```
+ls regions* |wc -l
+```
+
+*1. Create this many copies of the submission script*
+```
+for i in {1..32}; do cp var_calling.20190211-161117.smsjob.sh "var_calling.20190211-161117.smsjob$i.sh";
+```
+Where 32 should be replaced by number of regions files. 
 
 
+*2-4 Replace the variables in each script*
 
+
+*Check this has worked correctly*
+```
+grep "REGIONS=" var_calling*sh
+grep regions var_calling*sh
+grep 
+```
 
 
 
