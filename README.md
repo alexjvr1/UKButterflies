@@ -154,6 +154,25 @@ Where 32 should be replaced by number of regions files.
 
 *2-4 Replace the variables in each script*
 
+```
+paste -d' ' <(awk '{print $1}' regions.names) <(awk '{print $1}' var_calling.names) >> variables.names
+head variables.names
+
+regionsaa var_calling.20190211-161117.smsjob10.sh
+regionsab var_calling.20190211-161117.smsjob11.sh
+regionsac var_calling.20190211-161117.smsjob12.sh
+regionsad var_calling.20190211-161117.smsjob13.sh
+regionsae var_calling.20190211-161117.smsjob14.sh
+regionsaf var_calling.20190211-161117.smsjob15.sh
+```
+
+Use these info to replace
+```
+
+```
+
+
+
 
 *Check this has worked correctly*
 ```
