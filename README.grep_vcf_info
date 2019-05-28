@@ -12,14 +12,14 @@ paste temp.id temp.length > G$i.id_length.txt
 done
 
 rm temp*
-
+################################################
 #012 files
 for i in {1..3}
 do
 vcftools --vcf G$i.*.vcf  --012 --out G$i.raw
 done
 
-
+################################################
 #calculate number of snps per contig per species
 for i in {1..3}
 do
