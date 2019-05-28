@@ -1,0 +1,12 @@
+#grep contig info from vcf
+
+#unzip all vcf files (G triplet) 
+
+gunzip -d G*
+
+#Get the contig ids and length
+for i in {1..3}
+do
+grep '##contig' G$i.*.vcf| cut -f3 -d=|cut -f1 -d, > G$i.contigid.txt
+grep '##contig' G$i.*.vcf|cut -f4 -d=|cut -f1 -d'>' > G$i.length.txt
+done
