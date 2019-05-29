@@ -17,6 +17,8 @@
 # 1.0.2 - AJvR 5/2/2019
 #	- Remove references to scratch directory. Tmp directory now made in local working directory. 
 #	- write outdir to local dir
+# 1.0.2 - AJvR 29/03/2019 
+#	- Remove second and third adapters. We've decided to trim based on the first adapter only. Poly-A and poly-T should be removed during the mapping step. 
 
 
 VERSION='1.0.1-2018.10.24'
@@ -63,11 +65,11 @@ function usage {
 	echo "      -m <allocated memory> => Allocated memory (in gigabytes) for each analysis (optional: default=$MEM)"
 	echo "      -ph <phred score> => Phred score encoding (either 33 or 64 ; optional: default=phred$PHREDSCORE)"
 	echo "      -fwad1 <1st adaptor sequence to look in forward read/R1> (optional: default=$FWADAPT1)"
-	echo "      -fwad2 <2nd adaptor sequence to look in forward read/R1> (optional: default=$FWADAPT2)"
-	echo "      -fwad3 <3rd adaptor sequence to look in forward read/R1> (optional: default=$FWADAPT3)"
+#	echo "      -fwad2 <2nd adaptor sequence to look in forward read/R1> (optional: default=$FWADAPT2)"
+#	echo "      -fwad3 <3rd adaptor sequence to look in forward read/R1> (optional: default=$FWADAPT3)"
 	echo "      -rvad1 <1st adaptor sequence to look in reverse read/R2> (optional: default=$RVADAPT1)"
-	echo "      -rvad2 <2nd adaptor sequence to look in reverse read/R2> (optional: default=$RVADAPT2)"
-	echo "      -rvad3 <3rd adaptor sequence to look in reverse read/R2> (optional: default=$RVADAPT3)"
+#	echo "      -rvad2 <2nd adaptor sequence to look in reverse read/R2> (optional: default=$RVADAPT2)"
+#	echo "      -rvad3 <3rd adaptor sequence to look in reverse read/R2> (optional: default=$RVADAPT3)"
 	echo "      -minl <--minimum-length option> => see cutadapt manual (optional: default=$MINLEN)"
 	echo "      -phredq <Quality trimming -q option> => see cutadapt manual (optional: default=$PHREDQUAL)"
         echo "      -job <name of job>    => Name of current job"
@@ -111,21 +113,21 @@ then
 			-fwad1) shift
 				FWADAPT1=$1
 				;;
-			-fwad2) shift
-				FWADAPT2=$1
-                ;;
-			-fwad3) shift
-				FWADAPT3=$1
-				;;
+#			-fwad2) shift
+#				FWADAPT2=$1
+ #               ;;
+#			-fwad3) shift
+#				FWADAPT3=$1
+#				;;
 			-rvad1) shift
 				RVADAPT1=$1
 				;;
-			-rvad2) shift
-				RVADAPT2=$1
-				;;
-			-rvad3) shift
-				RVADAPT3=$1
-				;;
+#			-rvad2) shift
+#				RVADAPT2=$1
+#				;;
+#			-rvad3) shift
+#				RVADAPT3=$1
+#				;;
 			-minl) shift
 				MINLEN=$1
 				;;
@@ -227,7 +229,7 @@ LOG="\$OUTDIR/"\${FQ1%%_R1.*}".log"
 echo "cutadapt \$FQ1 \$FQ2 files..." > \$LOG
 echo >> \$LOG 
 echo "CMD: " >> \$LOG
-echo "$CMD  -a $FWADAPT1 -a $FWADAPT2 -a $FWADAPT3 -A $RVADAPT1 -A $RVADAPT2 -A $RVADAPT3 \\\">> \$LOG
+echo "$CMD  -a $FWADAPT1 -A $RVADAPT1 \\\">> \$LOG
 echo "-m $MINLEN -q $PHREDQUAL \\\">> \$LOG
 
 EOF
@@ -251,12 +253,12 @@ EOF
 
 if [[ $PHREDSCORE == 33 ]];
 	then 
-		echo "$CMD -a $FWADAPT1 -a $FWADAPT2 -a $FWADAPT3 -A $RVADAPT1 -A $RVADAPT2 -A $RVADAPT3 -m $MINLEN -q $PHREDQUAL -o \${FQ1%%R1.fastq*}cutadapt_filtered_R1.fastq.gz -p \${FQ2%%R2.fastq*}cutadapt_filtered_R2.fastq.gz \$FQ1 \$FQ2 >> \$LOG 2>&1" >> $SMSJOB;
+		echo "$CMD -a $FWADAPT1 -A $RVADAPT1 -m $MINLEN -q $PHREDQUAL -o \${FQ1%%R1.fastq*}cutadapt_filtered_R1.fastq.gz -p \${FQ2%%R2.fastq*}cutadapt_filtered_R2.fastq.gz \$FQ1 \$FQ2 >> \$LOG 2>&1" >> $SMSJOB;
 fi
 
  if [[ $PHREDSCORE == 64 ]];
      then 
-         echo "$CMD -a $FWADAPT1 -a $FWADAPT2 -a $FWADAPT3 -A $RVADAPT1 -A $RVADAPT2 -A $RVADAPT3 -m $MINLEN -q $PHREDQUAL --quality-base=64 -o \${FQ1%%R1.fastq*}cutadapt_filtered_R1.fastq.gz -p \${FQ2%%R2.fastq*}cutadapt_filtered_R2.fastq.gz" >> $SMSJOB;
+         echo "$CMD -a $FWADAPT1 -A $RVADAPT1 -m $MINLEN -q $PHREDQUAL --quality-base=64 -o \${FQ1%%R1.fastq*}cutadapt_filtered_R1.fastq.gz -p \${FQ2%%R2.fastq*}cutadapt_filtered_R2.fastq.gz" >> $SMSJOB;
 fi
 
 cat >> $SMSJOB <<EOF
