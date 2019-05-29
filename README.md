@@ -101,14 +101,18 @@ Edit the generated script above to submit from your home directory:
 ```
 
 
+
+
 ### 02. Map to reference genome with BWA mem
 
+It is more efficient to run this code in local directory before submitting to queue
 ```
-#It is more efficient to run this code in local directory before submitting to queue
+#Index the reference genome if needed. Check whether the *fasta.fai* file exists in the SpeciesName/RefGenome/ folder in your local directory. If not, run the indexing code. 
 
 #index reference genome
 module load apps/bwa-0.7.15
 bwa index RefGenome/*fasta
+
 
 #Create files with input names
 ls 01a_museum_cutadapt_reads/*R1*fastq.gz >> R1.museum.names
@@ -116,6 +120,7 @@ sed -i s:01a_museum_cutadapt_reads/::g R1.museum.names
 
 ls 01a_museum_cutadapt_reads/*R2*fastq.gz >> R2.museum.names
 sed -i s:01a_museum_cutadapt_reads/::g R2.museum.names
+
 
 #make output directories
 mkdir 02a_museum_mapped
@@ -130,6 +135,7 @@ mkdir 02a_modern_mapped
 02_MapwithBWAmem.ARRAY_modern.sh
 
 * Check that everything has mapped correctly by checking the file sizes. If the mapping is cut short (e.g. by exceeding the requested walltime) the partial bam file will look complete and can be indexed. But the bam file size will be small (~500kb) and empty when you look at it. 
+
 
 ```
 #To determine file size
@@ -146,7 +152,11 @@ Check the output with samtools flagstat
 module load apps/samtools-1.8
 samtools flagstat file.bam
 
+#make a flagstat log file for all of the samples
+for i in $(ls *bam); do ls $i && samtools flagstat $i; done >> SpeciesName.flagstat.log
 ```
+
+
 
 ## Variant calling
 
