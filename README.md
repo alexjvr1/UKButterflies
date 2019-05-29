@@ -125,6 +125,13 @@ sed -i s:01a_museum_cutadapt_reads/::g R2.museum.names
 #make output directories
 mkdir 02a_museum_mapped
 mkdir 02a_modern_mapped
+
+#Check that the file separator makes sense. This will be different for the musuem and modern samples because the samples are named differently. On the line: 
+##sample_name=`echo ${NAME1} | awk -F "_L007" '{print $1}'`
+#Change the -F "xxx" according to the file names. 
+#e.g the above works for files named as follows: 
+#HS-01-2016-26_L007_cutadapt_filtered_R2.fastq.gz
+#we want only the first part of this name to carry through. 
 ```
 
 
