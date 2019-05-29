@@ -50,6 +50,39 @@ parallel_fastqc_bcp3.sh
 
 We're removing all sequences that are shorter than 20bp and 3' quality trimmed to remove bases with PHRED quality score of < 20 with Cutadapt.  
 
+If you're running this on BlueCrystal, you'll have to install cutadapt locally first
+```
+module load languages/python-anaconda3-5.2.0
+
+#install cutadapt in your home directory using the web instructions
+pip3 install --user --upgrade cutadapt
+
+#Check that this cutadapt works
+~/.local/bin/cutadapt --help
+
+
+##Check if this directory is in your PATH:
+echo $PATH
+
+##And add to PATH if it isn't yet
+PATH="$PATH:~/.local/bin/"
+
+##Now you can run cutadapt directly
+cutadapt --help
+```
+
+Edit the scripts below to submit from your home directory: 
+
+1. Set all paths to your home directory if necessary. 
+
+2. Adjust the number of threads (PBS -t 1-xx) to equal the number of individuals to be analysed. 
+
+3. Check that any empty arguments have been removed from the cutadapt command
+
+4. You might have to set the path to cutadapt to find your local version
+
+
+
 
 01a_museum_cutadapt_filtering_trimming.sh
 
