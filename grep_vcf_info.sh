@@ -1,5 +1,6 @@
 
 #1.GREP CONTIG INFO FROM VCF FILE
+#NOTE: Change G if using for another triplet
 
 #unzip all vcf files
 gunzip -d G*.vcf.gz
@@ -24,7 +25,7 @@ done
 
 #3.CALCULATE number of snps per contig and per species 
 
-#NOTE:THE LOOP TAKES A WHILE TO RUN. BEST TO RUN ON A CLUSTER IN AN ARRAY JOB (remove loop and replace $i by $PBS_ARRAYID)
+#NOTE:THE LOOP TAKES A WHILE TO RUN. BEST TO RUN IT IN AN ARRAY JOB AT BC (remove loop and replace $i by $PBS_ARRAYID)
 
 for i in {1..3}
 do
