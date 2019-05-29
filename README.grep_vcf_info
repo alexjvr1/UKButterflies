@@ -1,41 +1,47 @@
-#grep contig info from vcf
+
+#1.GREP CONTIG INFO FROM VCF FILE
 
 #unzip all vcf files
-gunzip -d G*
+gunzip -d G*.vcf.gz
 
-#Contig ids and length from vcf files
+#Get the contig ids and length from vcf files
 for i in {1..3}
 do
-grep '##contig' G$i.*.vcf| cut -f3 -d=|cut -f1 -d, > temp.id
-grep '##contig' G$i.*.vcf|cut -f4 -d=|cut -f1 -d'>' > temp.length
-paste temp.id temp.length > G$i.id_length.txt
+  grep '##contig' G$i.*.vcf| cut -f3 -d=|cut -f1 -d, > temp.id
+  grep '##contig' G$i.*.vcf|cut -f4 -d=|cut -f1 -d'>' > temp.length
+  paste temp.id temp.length > G$i.id_length.txt
 done
 
 rm temp*
-################################################
-#012 files
+
+#2.CREATE 012 FILES
+#used to count number of snps per contig/scaffold
 for i in {1..3}
 do
-vcftools --vcf G$i.*.vcf  --012 --out G$i.raw
+  vcftools --vcf G$i.*.vcf  --012 --out G$i.raw
 done
 
-################################################
-#calculate number of snps per contig per species
+
+#3.CALCULATE number of snps per contig and per species 
+
+#NOTE:THE LOOP TAKES A WHILE TO RUN. BEST TO RUN ON A CLUSTER IN AN ARRAY JOB (remove loop and replace $i by $PBS_ARRAYID)
+
 for i in {1..3}
 do
 
-#calculate number of contigs per species
-nb_id=$(wc G$i.id_length.txt| awk '{print $1}')
+  #count number of contigs per species (for j loop)
+  nb_id=$(wc -l G$i.id_length.txt| cut -d ' ' -f1)
 
-for (( j=1; j<=$nb_id; j++ ))
-do
-#read contig id (per line)
-id=$(sed -n $j"p" G$i.id_length.txt|awk '{print $1}')
+  for (( j=1; j<=$nb_id; j++ ))
+  do
+    #read contig id (per line)
+    id=$(sed -n $j"p" G$i.id_length.txt|cut -d$'\t' -f1)
 
-#calculate number of snps per contig (read 012 file , count rows with column 1=id, print firt column of wc)
-awk -v var=$id '$1 == var { print $0 }' G$i.raw.012.pos| wc |awk '{print $1}' >> G$i.n_snps
+    #count number of snps per contig (read 012.pos file , count rows with column 1=id, print firt column of wc)
+    awk -v var=$id '$1 == var { print $0 }' G$i.raw.012.pos| wc -l |cut -d ' ' -f1 >> G$i.n_snps
+  done
+
+  #final file with contig label,length and number of snps
+  paste G$i.id_length.txt G$i.n_snps > G$i.seqinfo
 done
 
-#final file with contig label,length and number of snps
-paste G$i.id_length.txt G$i.n_snps > G$i.seqinfo
-done
