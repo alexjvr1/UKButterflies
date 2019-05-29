@@ -126,6 +126,8 @@ sed -i s:01a_museum_cutadapt_reads/::g R2.museum.names
 mkdir 02a_museum_mapped
 mkdir 02a_modern_mapped
 
+#Check that you're pointing to the correct reference genome
+
 #Check that the file separator makes sense. This will be different for the musuem and modern samples because the samples are named differently. On the line: 
 ##sample_name=`echo ${NAME1} | awk -F "_L007" '{print $1}'`
 #Change the -F "xxx" according to the file names. 
