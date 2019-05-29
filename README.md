@@ -46,7 +46,7 @@ parallel_fastqc_bcp3.sh
 
 ### 01. Trimming adapter and poor quality sequence
 
-#### *pipeline*
+
 
 We're removing all sequences that are shorter than 20bp and 3' quality trimmed to remove bases with PHRED quality score of < 20 with Cutadapt.  
 
@@ -71,18 +71,7 @@ PATH="$PATH:~/.local/bin/"
 cutadapt --help
 ```
 
-Edit the scripts below to submit from your home directory: 
-
-1. Set all paths to your home directory if necessary. 
-
-2. Adjust the number of threads (PBS -t 1-xx) to equal the number of individuals to be analysed. 
-
-3. Check that any empty arguments have been removed from the cutadapt command
-
-4. You might have to set the path to cutadapt to find your local version
-
-
-
+#### *pipeline*
 
 01a_museum_cutadapt_filtering_trimming.sh
 
@@ -98,6 +87,18 @@ Edit the scripts below to submit from your home directory:
 
 01a_parallel_cutadapt_bluecp3.sh
 
+
+Edit the generated script above to submit from your home directory: 
+
+```
+1. Set all paths to your home directory if necessary. 
+
+2. Adjust the number of threads (PBS -t 1-xx) to equal the number of individuals to be analysed. 
+
+3. Check that any empty arguments have been removed from the cutadapt command
+
+4. You might have to set the path to cutadapt to find your local version
+```
 
 
 ### 02. Map to reference genome with BWA mem
