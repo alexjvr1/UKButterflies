@@ -14,35 +14,16 @@ do
 done
 
 rm temp*
-
-#2.CREATE 012 FILES
-#used to count number of snps per contig/scaffold
-for i in {1..3}
-do
-  vcftools --vcf G$i.*.vcf  --012 --out  G$i.modern_variants
-done
-
-
-#3.CALCULATE number of snps per contig and per species 
-
-#NOTE:THE LOOP TAKES A WHILE TO RUN. BEST TO RUN IT IN AN ARRAY JOB AT BC (remove loop and replace $i by $PBS_ARRAYID)
+#2.CALCULATE number of snps per contig and per species  (USING BCFTOOLS: more efficient than my previous bash script): 
 
 for i in {1..3}
 do
+tabix -p vcf G$i.modern_variants.bial.noindel.qs20.cov40.mdp10Mdp2200.vcf.gz #needs indexing
+#just contigs with snps
+bcftools index -s G$i.modern_variants.bial.noindel.qs20.cov40.mdp10Mdp2200.vcf.gz > G$i.seqinfo_variants
 
-  #count number of contigs per species (for j loop)
-  nb_id=$(wc -l G$i.id_length.txt| cut -d ' ' -f1)
-
-  for (( j=1; j<=$nb_id; j++ ))
-  do
-    #read contig id (per line)
-    id=$(sed -n $j"p" G$i.id_length.txt|cut -d$'\t' -f1)
-
-    #count number of snps per contig (read 012.pos file , count rows with column 1=id, print firt column of wc)
-    awk -v var=$id '$1 == var { print $0 }' G$i.modern_variants.012.pos| wc -l |cut -d ' ' -f1 >> G$i.n_snps
-  done
-
-  #final file with contig label,length and number of snps
-  paste G$i.id_length.txt G$i.n_snps > G$i.seqinfo
+#compare files:create file for contigs without variants
+awk 'FNR==NR{a[$1];next};!($1 in a)' G$i.seqinfo_variants G$i.id_length.txt > G$i.seqinfo_novariants
 done
 
+ 
