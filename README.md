@@ -184,6 +184,8 @@ The variant calling step benefits greatly from the multi-threading and array cap
 
 03a_variant_calling_bluecp3.sh
 
+This generates a regions file where each "region" contains a max of 50 contigs/scaffolds and is max 4634570bp long. 
+
 
 ##### 2. Split the regions file into several files with 100 regions in each
 
