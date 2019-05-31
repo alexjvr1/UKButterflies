@@ -122,6 +122,9 @@ Data within each folder will be organised as follows
 
 Raw fastq files for modern and museum samples. 
 
+These folders will be emptied after the cutadapt reads have been produced to save space. Raw data can be recovered from the raw data folders. See shared doc to identify relevant libraries. 
+
+
 #### *01a_modern_cutadapt_reads* and *01a_museum_cutadapt_reads*
 
 Adapter trimmed fastq samples for modern and musuem. 
