@@ -19,7 +19,7 @@ C1_Aricia_artaxerxes
 
 C3_Aricia_agestis (Velocity data distinct from JB & MdJ's Pop gen data - see below)
 
-D3_ararge_aegeria_data
+D3_Pararge_aegeria_data
 
 AriciaAgestsis (population genomics and linkage map data - JB & MdJ)
 
