@@ -66,6 +66,12 @@ G1_Thymelicus_acteon
 
 G2_Ochlodes_sylvanus
 
+E1_Erebia_epiphron
+
+E2_Erebia_aethiops
+
+E3_Aphantopus_hyperantus
+
 
 
 ##### */projects/Adaptation_in_rainforest_flies/velocity_project/Genome_fastqs/*
