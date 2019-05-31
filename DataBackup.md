@@ -59,10 +59,31 @@ G2_Ochlodes_sylvanus
 
 Raw data for each species
 
-Aphantopus_hyperantus  Eilema_griseola       Ochlodes_sylvanus    Xanthorhoe_fluctuata
-Aricia_agestis         Hesperia_comma        Polyommatus_coridon
-Aricia_artaxerxes      Maniola_jurtina       temp.sh
-Cupido_minimus         Miltochrista_miniata  Thymelicus_acteon
+Aphantopus_hyperantus  
+
+Eilema_griseola
+
+Ochlodes_sylvanus
+
+Xanthorhoe_fluctuata
+
+Aricia_agestis
+
+Hesperia_comma
+
+Polyommatus_coridon
+
+Aricia_artaxerxes
+
+Maniola_jurtina
+
+temp.sh
+
+Cupido_minimus
+
+Miltochrista_miniata
+
+Thymelicus_acteon
 
 
 
