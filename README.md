@@ -217,8 +217,9 @@ Where 31 should be replaced by number of regions files.
 
 *2-4 Replace the variables in each script*
 
+This script doesn't work.. 
 ```
-for i in $(ls var_calling.20*sh); do while read -r a; do sed -i "s/regions/${a}/" $i; done; done < regions.names
+for i in $(ls var_calling.20*21.*sh); do while read -r a; do sed -i "s/regions/${a}/" $i; done; done < regions.names
 ```
 
 
