@@ -18,8 +18,6 @@ email: hpc-help@bristol.ac.uk
 
 #### */projects/Butterfly_genome_analysis/alex*
 
-A1_Lymantria_monacha
-
 B1_Cupido_minimus
 
 C1_Aricia_artaxerxes
