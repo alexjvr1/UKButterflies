@@ -223,14 +223,21 @@ for i in $(ls var_calling.20*21.*sh); do while read -r a; do sed -i "s/regions/$
 ```
 
 
+*5 Correct number of threads requested
 
+Modify this script for your species. 
+```
+for i in $(ls var_calling*sh); do sed -i 's:1-xxx:1-100:g' $i; done
+
+```
 
 
 *Check this has worked correctly*
 ```
 grep "REGIONS=" var_calling*sh
 grep regions var_calling*sh
-grep 
+grep "PBS -N"
+grep "PBS -t"
 ```
 
 
