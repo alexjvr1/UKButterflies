@@ -7,6 +7,13 @@ Data are backed up in long term storage on the RDSF in two folders:
 /projects/Adaptation_in_rainforest_flies
 
 
+## Note on file permissions
+
+For the most part these files will be read only to prevent them from being deleted accidentally. This means the person who transferred the files to the RDSF has to modify permissions if anything needs to be deleted. In cases where this person has left the RDSF storage team can change permissions as needed. 
+
+email: hpc-help@bristol.ac.uk
+
+
 ## Data locations
 
 #### */projects/Butterfly_genome_analysis/alex*
