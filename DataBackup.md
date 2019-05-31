@@ -9,7 +9,7 @@ Data are backed up in long term storage on the RDSF in two folders:
 
 ## Data locations
 
-*/projects/Butterfly_genome_analysis/alex*
+#### */projects/Butterfly_genome_analysis/alex*
 
 B1_
 
@@ -18,7 +18,7 @@ C3_
 D3_
 
 
-*/projects/Butterfly_genome_analysis/butterfly_data*
+#### */projects/Butterfly_genome_analysis/butterfly_data*
 
 rawseqModern2
 
@@ -26,7 +26,7 @@ rawseqMuseum1_Jan2019
 
 rawseq_Pararge_aegeria
 
-*/projects/Butterfly_genome_analysis/butterfly_data/RefGenomes*
+##### */projects/Butterfly_genome_analysis/butterfly_data/RefGenomes*
 
 Hesperia_comma
 
@@ -41,7 +41,7 @@ Plebejus_argus
 Thymalicus_acteon
 
 
-*/projects/Adaptation_in_rainforest_flies*
+##### */projects/Adaptation_in_rainforest_flies*
 
 
 
