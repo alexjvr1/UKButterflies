@@ -11,11 +11,17 @@ Data are backed up in long term storage on the RDSF in two folders:
 
 #### */projects/Butterfly_genome_analysis/alex*
 
-B1_
+A1_Lymantria_monacha
 
-C3_
+B1_Cupido_minimus
 
-D3_
+C1_Aricia_artaxerxes
+
+C3_Aricia_agestis (Velocity data distinct from JB & MdJ's Pop gen data - see below)
+
+D3_ararge_aegeria_data
+
+AriciaAgestsis (population genomics and linkage map data - JB & MdJ)
 
 
 #### */projects/Butterfly_genome_analysis/butterfly_data*
