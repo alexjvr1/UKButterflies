@@ -41,7 +41,30 @@ Plebejus_argus
 Thymalicus_acteon
 
 
-##### */projects/Adaptation_in_rainforest_flies*
+##### */projects/Adaptation_in_rainforest_flies/velocity_project/*
+
+rawseqModern1_2018
+
+rawseqMuseum2_2019
+
+A1_Lymantria_monacha
+
+G1_Thymelicus_acteon
+
+G2_Ochlodes_sylvanus
+
+
+
+##### */projects/Adaptation_in_rainforest_flies/velocity_project/Genome_fastqs/*
+
+Raw data for each species
+
+Aphantopus_hyperantus  Eilema_griseola       Ochlodes_sylvanus    Xanthorhoe_fluctuata
+Aricia_agestis         Hesperia_comma        Polyommatus_coridon
+Aricia_artaxerxes      Maniola_jurtina       temp.sh
+Cupido_minimus         Miltochrista_miniata  Thymelicus_acteon
+
+
 
 
 
