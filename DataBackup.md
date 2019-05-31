@@ -99,3 +99,7 @@ The */filtered_variant_files_xxx/dir/* folder contains the modern, museum, and c
 Reference genome, index, and gff file for each species. 
 
 
+#### *ANGSD*
+
+All ANGSD analyses. 
+
