@@ -180,11 +180,23 @@ We use samtools mpileup to stack all reads for a locus from all individuals in t
 
 The variant calling step benefits greatly from the multi-threading and array capabilites on BlueCrystal. We break up the job by calling variants for each genomic region separately. This script will generate a single submission script for the entire dataset which will refer to a newly generated file called "regions" which contains the names of all the genomic regions (contig-xx, scaffold-xx). We have to split this script up because the maximum number of array jobs that we can run for a single script on BlueCrystal is 100.
 
+
 ##### 1. First generate the submission script and the regions file. Remember to change the variables in this script for the species you're working on: 
 
 03a_variant_calling_bluecp3.sh
 
 This generates a regions file where each "region" contains a max of 50 contigs/scaffolds and is max 4634570bp long. 
+
+The script needs to be modified depending on what files we're calling variants on. If calling independently for museum or modern, change the input file (-i) to point to the appropriate folder (e.g. 02a_modern_mapped)
+
+When calling on museum and modern together, create a folder called mapped and move all the mapped reads and indexes to this folder. Change the input file to mapped: 
+```
+mkdir mapped
+mv 02a_modern_mapped/* mapped/
+mv 02a_museum_mapped/* mapped/
+```
+
+Run the script above. 
 
 
 ##### 2. Split the regions file into several files with 100 regions in each
