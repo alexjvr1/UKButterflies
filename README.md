@@ -354,7 +354,43 @@ e.g
 OUTDIR="/newhome/bzzjrb/D2_Maniola_jurtina/03_variants/filtered_variant_files_June2019"
 
 
-#### Part2: Concat 
+Once this has run, determine the number of variants discoverd for each of the populations separately: 
+```
+module load apps/bcftools-1.8
+module load apps/vcftools-0.1.12b
+
+bcftools view -Ov modern..bcf >> modern...vcf
+bcftools view -Ov museum..bcf >> museum...vcf
+
+#Number of variants in modern only file after filtering
+vcftools --vcf modern..vcf
+
+#Variants in museum only file after filtering
+vcftools --vcf museum.vcf
+```
+
+
+
+#### Part2: Intersect the two files
+
+Find the intersection between these datasets. I.e. Keep only variants present in both files. 
+
+```
+cd filtered_variant_files_xxx
+module load apps/bcftools-1.8
+bcftools isec -p dir museum_variants.bial.noindel.xxx.bcf modern_variants.bial.noindel.xxx.bcf 
+```
+
+This command creates a four vcf files and a README.txt file in dir/
+```
+#The README file tells you what each of the vcf files is
+cd dir
+cat README.txt
+
+module load apps/vcftools-0.1.12b
+vcftools --vcf 0002.vcf
+vcftools --vcf 0003.vcf
+```
 
 
 
