@@ -325,12 +325,36 @@ Modify the previous script to point to the bcflist.ALL file instead of one of th
 
 ### 03c. SNP filtering
 
-Once we have the raw bcf file, we can look at the data and apply our filters. 
+#### Part1: Filtering by population
 
-Use the [03c_variants_filtering.sh](https://github.com/alexjvr1/UKButterflies/blob/master/03c_variants_filtering.sh) script: Remember to change the variables for the species of interest. 
+Once we have the raw bcf file, we can look at the data and apply our filters. 
 
 This script independently filters the museum and modern samples by splitting the bcf file. We have to create a list of museum and modern sample names for each of the datasets. For the expanding triplets we could also create a third population file to represent the expanding populations. For now we're keeping both modern populations together. 
 
+Use the [03c_variants_filtering.sh](https://github.com/alexjvr1/UKButterflies/blob/master/03c_variants_filtering.sh) script: Remember to change the variables for the species of interest: 
+
+1. Point to the raw bcf file
+
+2. Create the 03_variants/museum_samples_list.dsv and 03_variants/modern_samples_list.dsv files
+
+```
+module load apps/bcftools-1.8
+bcftools query -l xx.raw.bcf >> xx.samples_list.dsv
+cat xx.samples_list.dsv
+```
+
+copy and paste the museum sample names into museum_samples_list.dsv using nano. Same with modern samples. 
+
+3. Change the sample numbers in the file in three places: total, modern, museum
+
+4. Change the output file according to the month
+
+e.g 
+
+OUTDIR="/newhome/bzzjrb/D2_Maniola_jurtina/03_variants/filtered_variant_files_June2019"
+
+
+#### Part2: Concat 
 
 
 
