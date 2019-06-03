@@ -230,7 +230,13 @@ You'll need to replace 1) the script name 2) the job name in the PBS script, 3) 
 Count the number of subset regions files: 
 ```
 ls regions* >> regions.names
+
+#remove the top line "regions", as we only want to count the subset files
+#you can use nano for this.
+
+#then count the number of subset files
 cat regions.names |wc -l
+
 ##remember to keep only the subset regions names in the regions.names file.
 ```
 
