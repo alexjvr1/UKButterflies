@@ -257,7 +257,7 @@ for i in $(ls var_calling.20*21.*sh); do while read -r a; do sed -i "s/regions/$
 ```
 
 
-*5 Correct number of threads requested
+*5 Correct number of threads requested*
 
 Check how many threads need to be run for the total script by looking at one of the scripts
 ```
