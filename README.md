@@ -259,7 +259,17 @@ for i in $(ls var_calling.20*21.*sh); do while read -r a; do sed -i "s/regions/$
 
 *5 Correct number of threads requested
 
-Modify this script for your species. 
+Check how many threads need to be run for the total script by looking at one of the scripts
+```
+grep "PBS -t" var_calling..sh
+```
+This should return something like
+```
+var_calling.20190603-155815.smsjob10.sh:#PBS -t 1-1800
+```
+The total number of threads is 1800, but we can only run 100 at a time. Hence the multiple submission scripts.. 
+
+Modify PBS -t for all of the subset scripts. 
 ```
 for i in $(ls var_calling*sh); do sed -i 's:1-xxx:1-100:g' $i; done
 
