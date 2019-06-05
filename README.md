@@ -337,6 +337,19 @@ ls OUTF.*bcf >> bcflist.ALL
 Modify the previous script to point to the bcflist.ALL file instead of one of the batch files. 
 
 
+*##### Problems Encountered*
+
+A1
+```
+empty bcf files were not deleted, thus the bcftools concat script terminated. 
+Empty bcfs (i.e. where no variants are called) should be deleted by the script and have been for all other species. Perhaps the run timed out? But I received no error. 
+
+Soln: 
+Delete all empty bcf files before running concat
+
+Find empty files:
+find . -size 0
+```
 
 
 ### 03c. SNP filtering
