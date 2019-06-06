@@ -197,7 +197,7 @@ The variant calling step benefits greatly from the multi-threading and array cap
 
 ##### 1. First generate the submission script and the regions file. Remember to change the variables in this script for the species you're working on: 
 
-03a_variant_calling_bluecp3.sh
+[03a_variant_calling_bluecp3.sh](https://github.com/alexjvr1/UKButterflies/blob/master/03a_variant_calling_bluecp3.sh)
 
 This generates a regions file where each "region" contains a max of 50 contigs/scaffolds and is max 4634570bp long. 
 
