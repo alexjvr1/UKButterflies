@@ -335,7 +335,7 @@ Hence I've decreased the bcflist.batch length from 500 to 200 lines.
 
 I used batches of 500 for triplet G and D. 
 ```
-#### NB
+
 
 
 
