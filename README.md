@@ -326,7 +326,16 @@ Make sure there is a submission script for each of these batches using [03b_summ
 
 Submit these to queue. 
 
-Check that they're all the expected size, and that all the bcf files were indexed. Once all the OUTF.b.batchxx.bcf files have been created properly, we can concatenate them all together into a final xx.raw.bcf file. 
+Check that they're all the expected size, and that all the bcf files were indexed. Once all the OUTF.b.batchxx.bcf files have been created properly, we can concatenate them all together into a final xx.raw.bcf file.
+
+#### NB
+
+I've had a problem with these scripts timing out with no reported error. e.g. for G3 all longer scaffolds (>15k) were excluded from the concatenated bcfs. 
+Hence I've decreased the bcflist.batch length to 200 lines iso 500 which I used for triplet G and D. 
+
+
+
+#### NB
 
 Make a list of all the interim bcf files
 ```
