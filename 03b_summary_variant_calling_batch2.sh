@@ -14,7 +14,7 @@
 #PBS -N 03b_G1.FINALTEST  ##job name
 #PBS -l nodes=1:ppn=1  #nr of nodes and processors per node
 #PBS -l mem=16gb #RAM
-#PBS -l walltime=3:00:00 ##wall time.  
+#PBS -l walltime=10:00:00 ##wall time.  
 #PBS -j oe  #concatenates error and output files (with prefix job1)
 
 
