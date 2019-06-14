@@ -13,7 +13,7 @@
 
 ![D_museum2](./images/D.museum_contigsWithVariants.png)
 
-**NOTE:** Dashed line corresponds to contig length = 50 kb and *n* is the total number of contigs that have variants after the variant filtering.
+**Note:** Dashed line corresponds to contig length = 50 kb and *n* is the total number of contigs that have variants after the variant filtering.
 
 <br>
 
@@ -30,4 +30,11 @@
 ![D_museum1](./images/D.museum_nbSNPs_contigLength.png)
 
 
-**NOTE:** Red dashed line corresponds to the length of the largest contig.
+**Note:** Red dashed line corresponds to the length of the largest contig.
+
+<br>
+
+>
+-----------------------------------------
+__*FINAL NOTE:*__
+
