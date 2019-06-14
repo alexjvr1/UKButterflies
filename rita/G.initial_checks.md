@@ -9,7 +9,7 @@
 
 *Modern data*
 
-![G_modern2](./images/G.museum_contigsWithVariants.png)
+![G_modern2](./images/G.modern_contigsWithVariants.png)
 
 
 *Museum data*
