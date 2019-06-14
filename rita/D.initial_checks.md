@@ -30,7 +30,21 @@
 
 ![D_museum3](./images/D.museum_50kbUPcontigsWithVariants.png)
 
-**Note:** *n* is the total number of contigs larger than 50kb that have variants after the variant filtering.
+
+**Note:** *n* is the total number of contigs larger than 50kb that have variants after the variant filtering. Similar histograms for both museum and and modern samples, but as we can see below the number of snps per contig is going to be different.  
+ 
+ <br>
+
+## Comparison between genome assembly and population data for the number of scaffolds >50 kb 
+
+Species | Genome Assembly | Population data (after variant filtering)
+------------ | ------------- |---------
+D1 | 184 | 174
+D2 | 211 | 168
+D3 | 889 | 871
+
+
+
 
 <br>
 
@@ -54,4 +68,6 @@
 >
 -----------------------------------------
 __*FINAL NOTE:*__
+
+The D triplet appears to be working fine.
 
