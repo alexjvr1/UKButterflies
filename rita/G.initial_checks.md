@@ -41,10 +41,11 @@
 
 <br>
 
-``-------------------------------------------------------------
-``
+>
+----------------------------------------------------------
+__*FINAL NOTE:*__ 
 
-__*FINAL NOTE:*__ Both modern and museum G3 don't show any variants in contigs larger than ~ 12 kb.
+Both modern and museum G3 don't show any variants in contigs larger than ~ 12 kb.
 
 
 
