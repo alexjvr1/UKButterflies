@@ -5,7 +5,7 @@
 
 *Modern data*
 
-![D_modern2](./images/D.museum_contigsWithVariants.png)
+![D_modern2](./images/D.modern_contigsWithVariants.png)
 
 
 *Museum data*
