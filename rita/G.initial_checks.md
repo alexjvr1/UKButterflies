@@ -33,7 +33,8 @@
 
 ![G_museum1](./images/G.museum_nbSNPs_contigLength.png)
 
-
+<br>
+-------------------------------------------------------------
 **NOTE:** Red dashed line corresponds to the length of the largest contig.
 
 
