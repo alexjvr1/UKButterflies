@@ -4,7 +4,8 @@
 
 ### Modern data
 
-![Plotting number of SNPs per contig length](./images/G.modern_nbSNPs_contigLength.png)
+
+[Plotting number of SNPs per contig length](./images/G.modern_nbSNPs_contigLength.png)
 
 
 
