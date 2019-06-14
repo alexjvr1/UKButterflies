@@ -1,11 +1,23 @@
 # Triplet G: some initial checks
 
-G1:
-G2:
-G3:
+
+## Contig length histogram (just for contigs with variants)
+
+*Modern data*
+
+![G_modern2](./images/G.moderncontigsWithVariants.png)
 
 
-## Plotting number of SNPs per contig length**
+*Museum data*
+
+
+![G_museum2](./images/G.museum_contigsWithVariants.png)
+
+**NOTE:** Dashed line corresponds to contig length = 50 kb
+
+<br>
+
+## Plotting number of SNPs per contig length 
 
 *Modern data*
 
@@ -18,8 +30,7 @@ G3:
 ![G_museum1](./images/G.museum_nbSNPs_contigLength.png)
 
 
-**NOTE:** Both modern and museum G3 don't show any variants in contigs larger than ~ 12 kb.
-
+**NOTE:** Both modern and museum G3 don't show any variants in contigs larger than ~ 12 kb. Dashed red line corresponds to the length of the largest contig.
 
 
 
