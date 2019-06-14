@@ -34,12 +34,15 @@
 ![G_museum1](./images/G.museum_nbSNPs_contigLength.png)
 
 <br>
--------------------------------------------------------------
+
 **NOTE:** Red dashed line corresponds to the length of the largest contig.
 
 
 
 <br>
+
+``-------------------------------------------------------------
+``
 
 __*FINAL NOTE:*__ Both modern and museum G3 don't show any variants in contigs larger than ~ 12 kb.
 
