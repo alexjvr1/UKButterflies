@@ -18,6 +18,22 @@
 
 <br>
 
+## Contig length histogram (zoom in for contigs larger than 50kb)
+
+*Modern data*
+
+![D_modern3](./images/D.modern_50kbUPcontigsWithVariants.png)
+
+
+*Museum data*
+
+
+![D_museum3](./images/D.museum_50kbUPcontigsWithVariants.png)
+
+**Note:** *n* is the total number of contigs larger than 50kb that have variants after the variant filtering.
+
+<br>
+
 ## Plotting number of SNPs per contig length 
 
 *Modern data*
