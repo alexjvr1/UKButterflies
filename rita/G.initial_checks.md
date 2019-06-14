@@ -1,7 +1,6 @@
 # Triplet G: some initial checks
 
-
-
+<br>
 
 
 
