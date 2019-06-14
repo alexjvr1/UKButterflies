@@ -1,5 +1,6 @@
 # Triplet D: some initial checks
 
+<br>
 
 ## Contig length histogram (just for contigs with variants)
 
