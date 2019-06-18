@@ -23,3 +23,11 @@ for i in $(ls *bam); do java -jar /cm/shared/apps/Picard-2.20.0/picard.jar Colle
       O=$i.insert_size_metrics.txt \
       H=$i.insert_size_histogram.pdf \
       M=0.5
+
+
+
+# Check path to jar file after loading package in home directory
+# eg:
+# module load apps/picard-2.20.0
+# echo $PATH
+# /cm/shared/languages/Java-JDK-8u144/jdk1.8.0_144/bin:/cm/shared/apps/moab/7.2.9/sbin:/cm/shared/apps/moab/7.2.9/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/sbin:/usr/sbin:/opt/dell/srvadmin/bin:/cm/shared/apps/MplusDemo:.:/cm/shared/apps/torque/4.2.4.1/bin:/cm/shared/apps/torque/4.2.4.1/sbin:/cm/shared/apps/Picard-2.20.0
