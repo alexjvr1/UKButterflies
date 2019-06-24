@@ -104,3 +104,43 @@ As the museum sample sequence depth limits the number of variants we can identif
 The choice of individuals will be based on the number of reads mapped per individual. We will target those samples that have mid-level reads as they will more readily be comparable to the well sequenced samples. The poorly sequenced samples will be ignored as we need only 18 individuals per population for confident population genetic analyses. 
 
 
+
+# Mod3 
+
+Modern 3 was sequenced with Genewiz on NovaSeq. This should provide us with more data. 
+
+24 June 2019
+
+- I assessed the number of raw reads and coverage across all sequenced samples to compare Mod1 and Mod2 (sequenced on HiSeq4000) and Mod3 (NovaSeq). 
+
+```
+# Data
+/Users/alexjvr/2018.postdoc/NercButterflies/G1.2.3.stats_03052019/ModLibraries.Reads.stats
+
+##R
+
+library(ggplot2)
+
+table <- read.table("ModLibraries.Reads.stats", header=T)
+
+table$Pop <- factor(table$Pop, levels=c("D2.Maniola.jurtina", "G1.Thymelicus.acteon", "G2.Ochlodes.sylvanus", "G3.Hesperia.comma_CORE", "G3.Hesperia.comma_EXP", "C1.Aricia.artaxerxes", "C2.Plebejus.argus", "C3.Aricia.agestis_CORE", "C3.Aricia.agestis_EXP", "D1.Hipparchia.semele", "E1.Erebia.epiphron", "E2.Erebia.aethiops", "E3.Aphantopus.hyperantus_CORE", "H2.Miltochrista.miniata", "H3.Eilema.griseola_CORE", "H3.Eilema.griseola_EXP", "J1.Aglais.urticae"))
+
+pdf("RawReadsPerLibrary_20190624.pdf")
+ggplot(table, aes(x=Pop, y=RawReads, colour=Library)) + geom_boxplot() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Raw reads per species")
+dev.off()
+
+pdf("MeanCoveragePerLibrary_20190624.pdf")
+ggplot(table, aes(x=Pop, y=MeanCov, colour=Library)) + geom_boxplot() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Mean Coverage per species")
+dev.off()
+
+```
+
+
+![alt_txt][RawReads]
+
+[RawReads]:https://user-images.githubusercontent.com/12142475/60028155-bce69680-9696-11e9-9916-89ac97c71365.png
+
+
+![alt_txt][MeanCov]
+
+[MeanCov]:https://user-images.githubusercontent.com/12142475/60028227-e0a9dc80-9696-11e9-833b-126b9865d7b9.png
