@@ -386,6 +386,12 @@ I checked whether I get the same size bcf file from two independent concatenatio
 This worked. So I am satisfied that we're not running into trouble during the concatenation steps. 
 ```
 
+General
+```
+Nodes seem to get stuck on BlueCrystal. If a job looks like it's taking much longer than anticipated this could be a problem. This was particularly problematic during variant calling and could be the cause of some of the errors encountered above. 
+This also happened when concatenating bcf files. 
+```
+
 
 ### 03c. SNP filtering
 
