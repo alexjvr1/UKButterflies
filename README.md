@@ -363,6 +363,29 @@ Find empty files:
 find . -size 0
 ```
 
+C2
+```
+Several 03_variants/tmp/*report.txt files with: 
+
+"0 variants called for 0 samples/individuals"
+
+These were all from job20 and job21. I will rerun these two jobs and replace the file
+
+This seems like the variant calling didn't complete. 
+
+In addition, concatenation of bcflist.batch10 failed with the following error: 
+Failed to parse header: 03_variants/tmp/job200084.variants.raw.bcf
+
+As I'm rerunning job20 and 21, I'll see if this error is resolved. 
+```
+
+C3
+```
+I checked whether I get the same size bcf file from two independent concatenations (from raw bcfs in tmp file to final C3.raw.bcf). 
+
+This worked. So I am satisfied that we're not running into trouble during the concatenation steps. 
+```
+
 
 ### 03c. SNP filtering
 
