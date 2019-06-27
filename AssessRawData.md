@@ -130,7 +130,7 @@ library(ggplot2)
 
 table <- read.table("ModLibraries.Reads.stats", header=T)
 
-table$Pop <- factor(table$Pop, levels=c("D2.Maniola.jurtina", "G1.Thymelicus.acteon", "G2.Ochlodes.sylvanus", "G3.Hesperia.comma_CORE", "G3.Hesperia.comma_EXP", "C1.Aricia.artaxerxes", "C2.Plebejus.argus", "C3.Aricia.agestis_CORE", "C3.Aricia.agestis_EXP", "D1.Hipparchia.semele", "E1.Erebia.epiphron", "E2.Erebia.aethiops", "E3.Aphantopus.hyperantus_CORE", "H2.Miltochrista.miniata", "H3.Eilema.griseola_CORE", "H3.Eilema.griseola_EXP", "J1.Aglais.urticae"))
+table$Pop <- factor(table$Pop, levels=c("D2.Maniola.jurtina", "G1.Thymelicus.acteon", "G2.Ochlodes.sylvanus", "G3.Hesperia.comma_CORE", "G3.Hesperia.comma_EXP", "C1.Aricia.artaxerxes", "C2.Plebejus.argus", "C3.Aricia.agestis_CORE", "C3.Aricia.agestis_EXP", "D1.Hipparchia.semele", "E1.Erebia.epiphron", "E2.Erebia.aethiops", "E3.Aphantopus.hyperantus_CORE", "H2.Miltochrista.miniata", "H3.Eilema.griseola_CORE", "H3.Eilema.griseola_EXP", "J1.Aglais.urticae", "I1.Xanthorhoe.fluctuata"))
 
 pdf("RawReadsPerLibrary_20190624.pdf")
 ggplot(table, aes(x=Pop, y=RawReads, colour=Library)) + geom_boxplot() + theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Raw reads per species")
@@ -145,9 +145,9 @@ dev.off()
 
 ![alt_txt][RawReads]
 
-[RawReads]:https://user-images.githubusercontent.com/12142475/60028155-bce69680-9696-11e9-9916-89ac97c71365.png
+[RawReads]:https://user-images.githubusercontent.com/12142475/60278787-f2d68580-98f7-11e9-833b-7a9261db4520.png
 
 
 ![alt_txt][MeanCov]
 
-[MeanCov]:https://user-images.githubusercontent.com/12142475/60028227-e0a9dc80-9696-11e9-833b-126b9865d7b9.png
+[MeanCov]:https://user-images.githubusercontent.com/12142475/60278835-01bd3800-98f8-11e9-91f8-81700f37796e.png
