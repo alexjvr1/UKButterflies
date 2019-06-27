@@ -6,6 +6,11 @@
 #PBS -j oe  #concatenates error and output files (with prefix job1)
 #PBS -t 1-52
 
+## For each new species change: 
+## 1. Reference genome
+## 2. line50 sample name to be written
+## 3. Number of threads requested to equal the number of indivs in the dataset. 
+
 #run job in working directory
 cd $PBS_O_WORKDIR 
 
