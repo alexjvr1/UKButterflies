@@ -112,7 +112,14 @@ Modern 3 was sequenced with Genewiz on NovaSeq. This should provide us with more
 24 June 2019
 
 - I assessed the number of raw reads and coverage across all sequenced samples to compare Mod1 and Mod2 (sequenced on HiSeq4000) and Mod3 (NovaSeq). 
+```
+#count the number of reads in the raw fastq.gz files on bluecrystal server: 
 
+for i in $(ls *R1*gz); do echo $(zcat $i|wc -l)/4 |bc; done
+```
+
+
+Plot on mac
 ```
 # Data
 /Users/alexjvr/2018.postdoc/NercButterflies/G1.2.3.stats_03052019/ModLibraries.Reads.stats
