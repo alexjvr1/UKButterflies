@@ -2,6 +2,8 @@
 
 We were interested to find out if museum sample quality was correlated with time of collection as different preservation methods were used at different time in the last century. 
 
+Draft MS: /Users/alexjvr/Manuscripts_AJvR/Velocity/MuseumDataQuality_20190702.docx
+
 ## Questions
 
 1. Does DNA quality decrease directly with age? Ie. the longer it's stored the lower the DNA quality? 
