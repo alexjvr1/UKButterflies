@@ -18,16 +18,31 @@ We were interested to find out if museum sample quality was correlated with time
 
 2. Percentage properly mapped reads vs age
 
-2. Length of reads vs age of sample
+3. Length of reads vs age of sample
 
-3. Amount of deamination vs age of sample (MapDamage2)
+4. Amount of deamination vs age of sample (MapDamage2)
 
-4. Amount of contaminants (Blobtools)
+5. Amount of contaminants (Blobtools)
 
 
 ## Analyses
 
 
 #### 1. Mapped reads vs age of sample
+
+
+#### 2. Percentage properly mapped reads vs age
+
+
+#### 3. Length of reads vs age of sample
+
+
+#### 4. Amount of deamination vs age of sample (MapDamage2)
+
+
+#### 5. Amount of contaminants (Blobtools)
+
+
+
 
 
