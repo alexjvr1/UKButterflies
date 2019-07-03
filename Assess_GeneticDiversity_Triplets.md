@@ -37,3 +37,9 @@ bcftools filter -S . -O u -e 'FMT/DP=0' Species.raw.bcf |bcftools view -O b -o S
 vcftools --bcf Species.raw.withmissing.bcf --missing-indv
 ```
 
+
+## 3. Expected heterozygosity
+
+
+
+
