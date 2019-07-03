@@ -47,3 +47,15 @@ vcftools --bcf Species.raw.withmissing.bcf --missing-indv
 
 
 
+## 4. Variants vs Depth
+
+Is raw depth a predictor of the number of variants in the final dataset? 
+
+```
+ggplot(data, aes(x=Depth.Raw, y=Nr.variants.isec, group=Species)) + geom_point(aes(shape=Pop, colour=Species)) + geom_title("")
+
+```
+
+[alt_txt][variants.vs.depth]
+
+[variants.vs.depth]:https://user-images.githubusercontent.com/12142475/60619574-e313e100-9dd0-11e9-9479-0baf80c281f0.png
