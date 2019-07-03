@@ -52,10 +52,16 @@ vcftools --bcf Species.raw.withmissing.bcf --missing-indv
 Is raw depth a predictor of the number of variants in the final dataset? 
 
 ```
-ggplot(data, aes(x=Depth.Raw, y=Nr.variants.isec, group=Species)) + geom_point(aes(shape=Pop, colour=Species)) + geom_title("")
+ggplot(data, aes(x=Depth.Raw, y=Nr.variants.isec, group=Species)) + geom_point(aes(shape=Pop, colour=Species))+ggtitle("Raw depth vs number of variants")
 
+ggplot(data[which(data$Pop=="Museum"&data$Depth.Raw<3),], aes(x=Depth.Raw, y=Nr.variants.isec, group=Species)) + geom_point(aes(colour=Species))+ggtitle("Museum: Raw depth vs number of variants")
 ```
 
 ![alt_txt][variants.vs.depth]
 
 [variants.vs.depth]:https://user-images.githubusercontent.com/12142475/60619574-e313e100-9dd0-11e9-9479-0baf80c281f0.png
+
+
+![alt_txt][museum.depth.vs.variants]
+
+[museum.depth.vs.variants]:https://user-images.githubusercontent.com/12142475/60619920-b1e7e080-9dd1-11e9-8395-d77a48ca3538.png
