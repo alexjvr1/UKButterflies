@@ -41,6 +41,15 @@ bcftools filter -S . -O u -e 'FMT/DP=0' Species.raw.bcf |bcftools view -O b -o S
 vcftools --bcf Species.raw.withmissing.bcf --missing-indv
 ```
 
+Figure: 
+```
+ggplot(data, aes(x=Pop2, y=Missingness.isec)) + geom_boxplot(aes(colour=Pop))+ggtitle("Missingness in isec dataset")+theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+![alt_txt][missingness.flt]
+
+[missingness.flt]:https://user-images.githubusercontent.com/12142475/60621036-97fbcd00-9dd4-11e9-9c0e-009d1e327260.png
+
 
 ## 3. Expected heterozygosity
 
