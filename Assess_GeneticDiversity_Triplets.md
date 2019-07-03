@@ -4,6 +4,10 @@ Plots of raw and filtered variant call files.
 
 All data in Dropbox file Velocity_MappingStatsPerSpecies_AJvR_20190604.xlsx
 
+Plots drawn here: 
+
+/Users/alexjvr/2018.postdoc/NercButterflies/G1.2.3.stats_03052019/Velocity_MappingStatsPerSpecies_Data
+
 
 ## 1. Individual Depth
 
