@@ -27,3 +27,13 @@ Questions, comments, and suggestions should be emailed to:
 vcftools --vcf file.vcf --depth
 ```
 
+
+## 2. Individual missingness
+
+Missingness stats for raw data from raw vcf files (e.g. A1.raw.vcf). These files need to be recoded to change missing variants to ".". 
+```
+bcftools filter -S . -O u -e 'FMT/DP=0' Species.raw.bcf |bcftools view -O b -o Species.raw.withmissing.bcf
+
+vcftools --bcf Species.raw.withmissing.bcf --missing-indv
+```
+
