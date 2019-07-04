@@ -81,7 +81,7 @@ ggplot(data, aes(x=Depth.Raw, y=Nr.variants.before.isec, group=Species)) + geom_
 
 ![alt_txt][variants.vs.depth]
 
-[variants.vs.depth]:https://user-images.githubusercontent.com/12142475/60619574-e313e100-9dd0-11e9-9479-0baf80c281f0.png
+[variants.vs.depth]:https://user-images.githubusercontent.com/12142475/60689759-b3400880-9eb8-11e9-8969-4512636fd075.png
 
 
 ![alt_txt][museum.depth.vs.variants]
