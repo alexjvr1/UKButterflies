@@ -91,4 +91,4 @@ ggplot(data, aes(x=Depth.Raw, y=Nr.variants.before.isec, group=Species)) + geom_
 
 ![alt_txt][non.isec.variants.vs.DP]
 
-[non.isec.variants.vs.DP]:https://user-images.githubusercontent.com/12142475/60663910-73e1cf80-9e58-11e9-8ede-45f854b27024.png
+[non.isec.variants.vs.DP]:https://user-images.githubusercontent.com/12142475/60689963-0ca93700-9ebb-11e9-80bf-dd24d1766980.png
