@@ -48,7 +48,7 @@ ggplot(data, aes(x=Pop2, y=Missingness.isec)) + geom_boxplot(aes(colour=Pop))+gg
 
 ![alt_txt][missingness.flt]
 
-[missingness.flt]:https://user-images.githubusercontent.com/12142475/60621036-97fbcd00-9dd4-11e9-9c0e-009d1e327260.png
+[missingness.flt]:https://user-images.githubusercontent.com/12142475/60690047-0b2c3e80-9ebc-11e9-8259-c43a0b1a6413.png
 
 
 ## 3. Expected heterozygosity
