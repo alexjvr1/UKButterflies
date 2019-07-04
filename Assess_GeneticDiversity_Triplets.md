@@ -53,7 +53,18 @@ ggplot(data, aes(x=Pop2, y=Missingness.isec)) + geom_boxplot(aes(colour=Pop))+gg
 
 ## 3. Expected heterozygosity
 
+Calculated using vcftools 
+```
+vcftools --bcf isec.bcf --het
 
+```
+
+Museum samples consistently have lower heterozygosity. I need to check why this is. I'll compare results with ANGSD outputs. 
+
+
+![alt_txt][ExpHet]
+
+[ExpHet]:https://user-images.githubusercontent.com/12142475/60665418-4e56c500-9e5c-11e9-9a7f-92a57cac8a0c.png
 
 
 ## 4. Variants vs Depth
