@@ -162,7 +162,7 @@ module load apps/samtools-1.8
 samtools flagstat file.bam
 
 #make a flagstat log file for all of the samples
-for i in $(ls *bam); do ls $i && samtools flagstat $i; done >> SpeciesName.flagstat.log
+for i in $(ls *bam); do ls $i >>flagstat.log && samtools flagstat $i >> flagstat.log; done
 ```
 
 Index the bam files with this script
