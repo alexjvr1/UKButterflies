@@ -57,6 +57,7 @@ Calculated using vcftools
 ```
 vcftools --bcf isec.bcf --het
 
+ggplot(data, aes(x=Pop2, y=ExpHet.isec)) + geom_boxplot(aes(colour=Pop))+ggtitle("Missingness in isec dataset")+theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
 
 Museum samples consistently have lower heterozygosity. I need to check why this is. I'll compare results with ANGSD outputs. 
@@ -64,7 +65,7 @@ Museum samples consistently have lower heterozygosity. I need to check why this 
 
 ![alt_txt][ExpHet]
 
-[ExpHet]:https://user-images.githubusercontent.com/12142475/60665418-4e56c500-9e5c-11e9-9a7f-92a57cac8a0c.png
+[ExpHet]:https://user-images.githubusercontent.com/12142475/60690087-55152480-9ebc-11e9-934b-d57672012b45.png
 
 
 ## 4. Variants vs Depth
