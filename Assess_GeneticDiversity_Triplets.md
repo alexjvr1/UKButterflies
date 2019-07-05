@@ -78,6 +78,8 @@ ggplot(data, aes(x=Depth.Raw, y=Nr.variants.isec, group=Species)) + geom_point(a
 ggplot(data[which(data$Pop=="Museum"&data$Depth.Raw<3),], aes(x=Depth.Raw, y=Nr.variants.isec, group=Species)) + geom_point(aes(colour=Species))+ggtitle("Museum: Raw depth vs number of variants")
 
 ggplot(data, aes(x=Depth.Raw, y=Nr.variants.before.isec, group=Species)) + geom_point(aes(shape=Pop, colour=Species))+ggtitle("Raw depth vs number of variants (non intersecting)")
+
+ggplot(data, aes(x=Depth.Raw, y=Nr.variants.before.isec, group=Species)) + geom_point(aes(shape=Pop, colour=Species))+ggtitle("Raw depth vs number of variants (non intersecting)")
 ```
 
 ![alt_txt][variants.vs.depth]
@@ -93,3 +95,9 @@ ggplot(data, aes(x=Depth.Raw, y=Nr.variants.before.isec, group=Species)) + geom_
 ![alt_txt][non.isec.variants.vs.DP]
 
 [non.isec.variants.vs.DP]:https://user-images.githubusercontent.com/12142475/60689963-0ca93700-9ebb-11e9-80bf-dd24d1766980.png
+
+![alt_txt][rawDepth.vs.rawVariants]
+
+[rawDepth.vs.rawVariants]:https://user-images.githubusercontent.com/12142475/60731426-710dda00-9f3f-11e9-8db5-1d5489ad881d.png
+
+
