@@ -66,6 +66,8 @@ rawseqModern1_2018
 
 rawseqMuseum2_2019
 
+rawseqMuseum3_July2019
+
 A1_Lymantria_monacha
 
 G1_Thymelicus_acteon
