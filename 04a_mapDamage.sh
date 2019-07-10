@@ -7,6 +7,7 @@
 
 # Description:
 # MapDamage to assess bias in transitions/transversions in the dataset. And to recalibrate .bam files
+# Each samples runs in ~30min. The script completes a species museum and modern bam files in 40min - 1hour on bluecrystal
 
 
 #PBS -N D2.MapDmg  ##job name
