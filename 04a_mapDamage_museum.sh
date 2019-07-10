@@ -7,13 +7,13 @@
 
 # Description:
 # MapDamage to assess bias DNA damage in museum vs modern data and rescale mapping quality in .bam files accordingly. 
-# Each samples runs in ~30min. The script completes a species museum and modern bam files in 40min - 1hour on bluecrystal
+# Each samples runs in 30min - 5hours. The script completes a species museum and modern bam files in 8 hours on bluecrystal
 
 
-#PBS -N D2.MapDmg  ##job name
+#PBS -N D2.MapDmg.mus  ##job name
 #PBS -l nodes=1:ppn=1  #nr of nodes and processors per node
 #PBS -l mem=16gb #RAM
-#PBS -l walltime=10:00:00 ##wall time.  
+#PBS -l walltime=20:00:00 ##wall time.  
 #PBS -j oe  #concatenates error and output files (with prefix job1)
 #PBS -t 1-87
 
@@ -27,7 +27,7 @@ module load languages/R-3.0.2
 # Define variables
 mapDamage="$HOME/.local/bin/mapDamage"
 RefSeq="../RefGenome/*fasta"
-NAME=$(sed "${PBS_ARRAYID}q;d" bamfiles.names)
+NAME=$(sed "${PBS_ARRAYID}q;d" bamfiles.mus.names)
 
 ##Script
 echo "mapDamage2 started" >> map.log
