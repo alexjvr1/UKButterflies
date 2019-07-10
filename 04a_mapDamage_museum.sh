@@ -37,4 +37,4 @@ sample_name=`echo ${NAME} | awk -F "_L00" '{print $1}'`
 echo "[mapping running for] $sample_name"
 printf "\n"
 echo "time $mapDamage --merge-reference-sequences -i ${NAME} -r $RefSeq >> mapdamage.log"
-time $mapDamage --merge-reference-sequences -i ${NAME} -r $RefSeq
+time $mapDamage --merge-reference-sequences -i ${NAME} -r $RefSeq --rescale
