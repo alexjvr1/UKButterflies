@@ -20,6 +20,10 @@ email: hpc-help@bristol.ac.uk
 
 B1_Cupido_minimus
 
+B2_Polyommatus_coridon
+
+B3_Polyommatus_bellargus
+
 C1_Aricia_artaxerxes
 
 C3_Aricia_agestis (Velocity data distinct from JB & MdJ's Pop gen data - see below)
@@ -31,11 +35,15 @@ AriciaAgestsis (population genomics and linkage map data - JB & MdJ)
 
 #### */projects/Butterfly_genome_analysis/butterfly_data*
 
-rawseqModern2
-
 rawseqMuseum1_Jan2019
 
+TrimmedMuseumII    = adapter trimmed data (by Sam)
+
+rawseqModern2
+
 rawseq_Pararge_aegeria
+
+
 
 ##### */projects/Butterfly_genome_analysis/butterfly_data/RefGenomes*
 
