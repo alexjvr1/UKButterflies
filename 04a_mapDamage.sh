@@ -3,13 +3,13 @@
 
 # (c) Alexandra Jansen van Rensburg
 # alexjvr@gmail.com
-# Last modified: 10/07/2019 15:55
+# Last modified: 03/10/2018 15:39:48
 
 # Description:
 # MapDamage to assess bias in transitions/transversions in the dataset. And to recalibrate .bam files
 
 
-#PBS -N D2.MapDmg.3  ##job name
+#PBS -N D2.MapDmg  ##job name
 #PBS -l nodes=1:ppn=1  #nr of nodes and processors per node
 #PBS -l mem=16gb #RAM
 #PBS -l walltime=10:00:00 ##wall time.  
@@ -35,5 +35,5 @@ echo "---------------" >> map.log
 sample_name=`echo ${NAME} | awk -F "_L00" '{print $1}'`
 echo "[mapping running for] $sample_name"
 printf "\n"
-echo "time $mapDamage -i ${NAME} -r $RefSeq >> mapdamage.log"
-time $mapDamage -i ${NAME} -r $RefSeq
+echo "time $mapDamage --merge-reference-sequences -i ${NAME} -r $RefSeq >> mapdamage.log"
+time $mapDamage --merge-reference-sequences -i ${NAME} -r $RefSeq
