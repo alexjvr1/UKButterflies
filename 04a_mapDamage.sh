@@ -6,7 +6,7 @@
 # Last modified: 03/10/2018 15:39:48
 
 # Description:
-# MapDamage to assess bias in transitions/transversions in the dataset. And to recalibrate .bam files
+# MapDamage to assess bias DNA damage in museum vs modern data and rescale mapping quality in .bam files accordingly. 
 # Each samples runs in ~30min. The script completes a species museum and modern bam files in 40min - 1hour on bluecrystal
 
 
