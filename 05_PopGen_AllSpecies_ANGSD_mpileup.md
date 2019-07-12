@@ -132,7 +132,7 @@ dev.off()
 
 ```
 
-#### C1 results
+#### C1 results (declining species)
 
 ![alt_txt][C1.screeplot]
 
@@ -148,19 +148,23 @@ coordinates = museum samples. Grid reference points are the two modern populatio
 [C1.sampling]:https://user-images.githubusercontent.com/12142475/61144679-72a24980-a4cd-11e9-9916-c0c60df47f07.png
 
 
+#### C2 results (stable) 
+
 ![alt_txt][C2.screeplot]
 
-[C2.screeplot]
+[C2.screeplot]:https://user-images.githubusercontent.com/12142475/61146705-90be7880-a4d2-11e9-9fa7-db2c611c990d.png
 
 ![alt_txt][C2.pca]
 
-[C2.pca]
+[C2.pca]:https://user-images.githubusercontent.com/12142475/61146733-a0d65800-a4d2-11e9-9ad0-c218235e8490.png
 
+
+#### C3 results (expanding)
 
 ![alt_txt][C3.screeplot]
 
-[C3.screeplot]
+[C3.screeplot]:https://user-images.githubusercontent.com/12142475/61146787-c2374400-a4d2-11e9-97cc-d9c82157aa02.png
 
 ![alt_txt][C3.pca]
 
-[C3.pca]
+[C3.pca]:https://user-images.githubusercontent.com/12142475/61146809-ce230600-a4d2-11e9-86d8-077f32def424.png
