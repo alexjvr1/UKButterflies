@@ -100,7 +100,7 @@ Edit the generated script above to submit from your home directory:
 4. You might have to set the path to cutadapt to find your local version
 ```
 
-
+To incorporate new data (e.g. resequencing of some individuals to increase mean depth), new fastq files need to be adapter trimmed. Fastq files are concatenated after this using the script [concat.fastq.sh](https://github.com/alexjvr1/UKButterflies/blob/master/concat.fastq.sh)
 
 
 ### 02. Map to reference genome with BWA mem
