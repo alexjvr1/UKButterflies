@@ -102,6 +102,16 @@ Edit the generated script above to submit from your home directory:
 
 To incorporate new data (e.g. resequencing of some individuals to increase mean depth), new fastq files need to be adapter trimmed. Fastq files are concatenated after this using the script [concat.fastq.sh](https://github.com/alexjvr1/UKButterflies/blob/master/concat.fastq.sh)
 
+Reseq data are kept in the following folders: 
+```
+00_raw_data_museum2
+01a_museum2_cutadapt_reads
+01a_mus.concat_cutadapt_reads  ## concatednated museum1 and museum2
+02a_museum2_mapped  ##see below
+```
+
+
+
 
 ### 02. Map to reference genome with BWA mem
 
@@ -180,6 +190,16 @@ cd $PBS_O_WORKDIR
 module load apps/bcftools-1.8
 for i in $(ls *bam); do bcftools index $i; done
 ```
+
+
+###### Reseq Data: Mapping
+
+The concatenated mus1 and mus2 fastq files are mapped with bwa mem and stored in the following folder: 
+```
+02a_museum2_mapped 
+```
+
+Continue on with variant calling as below and with genotype likelihood estimation as described in the ANGSD pipeline. 
 
 ## Variant calling
 
