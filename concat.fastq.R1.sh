@@ -6,6 +6,8 @@
 
 ## Concatenates fastq reads from a list of file names
 ## R1 and R2 are processed separately
+## Check that sample order is the same in both input files. 
+## Check log files that the correct samples were concatenated together. 
 
 
 #PBS -N G2.OS.concat.cutadapt  ##job name
@@ -13,7 +15,7 @@
 #PBS -l mem=16gb #RAM
 #PBS -l walltime=10:00:00 ##wall time.
 #PBS -j oe  #concatenates error and output files (with prefix job1)
-#PBS -t 1-66
+#PBS -t 1-33
 
 #run job in working directory
 cd $PBS_O_WORKDIR
@@ -28,17 +30,15 @@ cd $PBS_O_WORKDIR
 #remove all the extra sample names from the last two files. Make sure the sample names are in the same order in all files.
 #remove path before sample names
 
-NAME.MUS1.R1=$(sed "${PBS_ARRAYID}q;d" samplenames.museum1.R1)
-NAME.MUS1.R2=$(sed "${PBS_ARRAYID}q;d" samplenames.museum1.R2)
-NAME.MUS2.R1=$(sed "${PBS_ARRAYID}q;d" samplenames.museum1.R1)
-NAME.MUS2.R2=$(sed "${PBS_ARRAYID}q;d" samplenames.museum1.R2)
+NAMEMUS1R1=$(sed "${PBS_ARRAYID}q;d" samplenames.museum1.R1)
+#NAMEMUS1R2=$(sed "${PBS_ARRAYID}q;d" samplenames.museum1.R2)
+NAMEMUS2R1=$(sed "${PBS_ARRAYID}q;d" samplenames.museum2.R1)
+#NAMEMUS2R2=$(sed "${PBS_ARRAYID}q;d" samplenames.museum2.R2)
 
 
 ##Concat R1 fastq files
 
-sample_name.mus1.R1=`echo ${NAME.MUS1.R1} | awk -F "_190115" '{print $1}'`
-sample_name.mus2.R1=`echo ${NAME.MUS2.R1} | awk -F "_190627" '{print $1}'`
-echo "[concatenating] $sample_name.mus1.R1 and $sample_name.mus2.R1"
+echo "[concatenating] ${NAMEMUS1R1} and ${NAMEMUS2R1}"
 printf "\n"
-echo "time cat ../01a_museum_cutadapt_reads/${NAME.MUS1.R1} ../01a_museum2_cutadapt_reads/${NAME.MUS2.R1} > ${NAME.MUS2.R1}.concat.fastq.gz" >> concat.mus.R2.log
-time cat ../01a_museum_cutadapt_reads/${NAME.MUS1.R2} ../01a_museum2_cutadapt_reads/${NAME.MUS2.R2} > ${NAME.MUS2.R2}.concat.fastq.gz
+echo "time cat /newhome/aj18951/G3_Hesperia_comma/01a_museum_cutadapt_reads/${NAMEMUS1R1} newhome/aj18951/G3_Hesperia_comma/01a_museum2_cutadapt_reads/${NAMEMUS2R1} > ${NAMEMUS2R1}.concat.fastq.gz" >> concat.mus.R1.log
+time cat /newhome/aj18951/G3_Hesperia_comma/01a_museum_cutadapt_reads/${NAMEMUS1R1} /newhome/aj18951/G3_Hesperia_comma/01a_museum2_cutadapt_reads/${NAMEMUS2R1} > ${NAMEMUS2R1}.concat.fastq.gz
