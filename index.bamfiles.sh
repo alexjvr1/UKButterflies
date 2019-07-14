@@ -19,7 +19,7 @@ cd $PBS_O_WORKDIR
 
 #load modules
 
-module load apps/bcftools-1.8
+module load apps/samtools-1.8
 
 ##Set up array
 
@@ -29,5 +29,5 @@ NAME=$(sed "${PBS_ARRAYID}q;d" bamlist)
 echo "Indexing ${NAME}"
 printf "\n"
 
-echo "time bcftools index ${NAME}"
-time bcftools index ${NAME}
+echo "time samtools index ${NAME}"
+time samtools index ${NAME}
