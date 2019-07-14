@@ -175,21 +175,7 @@ samtools flagstat file.bam
 for i in $(ls *bam); do ls $i >>flagstat.log && samtools flagstat $i >> flagstat.log; done
 ```
 
-Index the bam files with this script
-```
-#!/bin/bash
-#PBS -N bam.index
-#PBS -l nodes=1:ppn=1  #nr of nodes and processors per node
-#PBS -l mem=16gb #RAM
-#PBS -l walltime=3:00:00 ##wall time.  
-#PBS -j oe  #concatenates error and output files (with prefix job1)
-
-#run job in working directory
-cd $PBS_O_WORKDIR 
-
-module load apps/bcftools-1.8
-for i in $(ls *bam); do bcftools index $i; done
-```
+Index the bam files with the script [index.bamfiles.sh](https://github.com/alexjvr1/UKButterflies/blob/master/index.bamfiles.sh)
 
 
 ###### Reseq Data: Mapping
