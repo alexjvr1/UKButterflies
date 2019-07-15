@@ -138,13 +138,13 @@ Lymantria monacha screeplot
 
 ![alt_txt][LM.scree]
 
-[LM.scree]:https://user-images.githubusercontent.com/12142475/61228059-6ad8e400-a71d-11e9-8d7e-56c1b90dba3c.png
+[LM.scree]:https://user-images.githubusercontent.com/12142475/61230838-ca85be00-a722-11e9-95a4-f425785eca5c.png
 
 
 
 ![alt_txt][LM.pca]
 
-[LM.pca]:https://user-images.githubusercontent.com/12142475/61228058-6ad8e400-a71d-11e9-8a0d-cf6db03a116f.png
+[LM.pca]:https://user-images.githubusercontent.com/12142475/61230837-c9ed2780-a722-11e9-930f-3169022b1e2a.png
 
 Map: Green flags= Museum, Red = Modern
 
