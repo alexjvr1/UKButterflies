@@ -132,6 +132,25 @@ dev.off()
 
 ```
 
+### A1 results (declining species)
+
+Lymantria monacha screeplot 
+
+![alt_txt][LM.scree]
+
+[LM.scree]:https://user-images.githubusercontent.com/12142475/61228059-6ad8e400-a71d-11e9-8d7e-56c1b90dba3c.png
+
+
+![alt_txt][LM.pca]
+
+[LM.pca]:https://user-images.githubusercontent.com/12142475/61228058-6ad8e400-a71d-11e9-8a0d-cf6db03a116f.png
+
+![alt_txt][map]
+
+[map]:https://user-images.githubusercontent.com/12142475/61228054-6a404d80-a71d-11e9-8f0b-a535fa2d08f3.png
+
+
+
 ### C1 results (declining species)
 
 ![alt_txt][C1.screeplot]
