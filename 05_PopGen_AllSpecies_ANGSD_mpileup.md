@@ -208,18 +208,18 @@ Baulieu Heathm Telegraph Hill, Turf Hill are modern populations.
 
 ![alt txt][D1.sampling]
 
-[D1.sampling]:(https://user-images.githubusercontent.com/52965134/61299182-856f9380-a7d7-11e9-91ee-9266c5583fad.png)
+[D1.sampling]:https://user-images.githubusercontent.com/52965134/61299182-856f9380-a7d7-11e9-91ee-9266c5583fad.png
 
 
 ### D2 results (stable)
 
 ![alt txt][D2.screeplot]
 
-[D1.screeplot]:(https://user-images.githubusercontent.com/52965134/61299545-32e2a700-a7d8-11e9-90a6-9d640a95f8d5.png)
+[D1.screeplot]:https://user-images.githubusercontent.com/52965134/61299545-32e2a700-a7d8-11e9-90a6-9d640a95f8d5.png
 
 ![alt txt][D2.pca]
 
-[D2.pca]:(https://user-images.githubusercontent.com/52965134/61299461-121a5180-a7d8-11e9-8661-11dc304a9f6f.png)
+[D2.pca]:https://user-images.githubusercontent.com/52965134/61299461-121a5180-a7d8-11e9-8661-11dc304a9f6f.png
 
 Map: Green= Museum, Red= Hemsbury, Blue= Stoke Woods
 
@@ -227,7 +227,7 @@ Hemsbury and Stoke Woods are modern populations.
 
 ![alt txt][D2.sampling]
 
-[D2.sampling]:(https://user-images.githubusercontent.com/52965134/61299758-9bca1f00-a7d8-11e9-9074-0a881288c910.png)
+[D2.sampling]:https://user-images.githubusercontent.com/52965134/61299758-9bca1f00-a7d8-11e9-9074-0a881288c910.png
 
 
 ### D3 results (expanding)
@@ -238,7 +238,7 @@ Hemsbury and Stoke Woods are modern populations.
 
 ![alt txt][D3.pca]
 
-[D3.pca]:(https://user-images.githubusercontent.com/52965134/61300059-33c80880-a7d9-11e9-97eb-514cc4d7715f.png)
+[D3.pca]:https://user-images.githubusercontent.com/52965134/61300059-33c80880-a7d9-11e9-97eb-514cc4d7715f.png
 
 Map: Turquoise= Museum, Red= Carverel copse, Brown= Hadleigh Railway Walk, Green= Martin Down NNR, Blue= Snapes Wood, Purple= Stour Wood, Pink= Wolves Wood
 
@@ -246,43 +246,43 @@ Carverel copse, Hadleigh Railway Walk, Martin Down NNR, Snapes Wood, Stour Wood 
 
 ![alt txt][D3.sampling1]
 
-[D3.sampling1]:(https://user-images.githubusercontent.com/52965134/61300370-bd77d600-a7d9-11e9-9638-f6ba855998c6.png)
+[D3.sampling1]:https://user-images.githubusercontent.com/52965134/61300370-bd77d600-a7d9-11e9-9638-f6ba855998c6.png
 
 ![alt txt][D3.sampling2]
 
-[D3.sampling2]:(https://user-images.githubusercontent.com/52965134/61300471-eac48400-a7d9-11e9-8322-5a8d201426a4.png)
+[D3.sampling2]:https://user-images.githubusercontent.com/52965134/61300471-eac48400-a7d9-11e9-8322-5a8d201426a4.png
 
 ![alt txt][D3.sampling3]
 
-[D3.sampling3]:(https://user-images.githubusercontent.com/52965134/61300522-0596f880-a7da-11e9-9242-00e344b2990e.png)
+[D3.sampling3]:https://user-images.githubusercontent.com/52965134/61300522-0596f880-a7da-11e9-9242-00e344b2990e.png
 
 
 ### G1 results (declining)
 
 ![alt txt][G1.screeplot]
 
-[G1.screeplot]:(https://user-images.githubusercontent.com/52965134/61300896-c2895500-a7da-11e9-86cd-104766b0f60d.png)
+[G1.screeplot]:https://user-images.githubusercontent.com/52965134/61300896-c2895500-a7da-11e9-86cd-104766b0f60d.png
 
 ![alt txt][G1.pca]
 
-[G1.pca]:(https://user-images.githubusercontent.com/52965134/61301140-3b88ac80-a7db-11e9-9226-e32c7e4e4f8b.png)
+[G1.pca]:https://user-images.githubusercontent.com/52965134/61301140-3b88ac80-a7db-11e9-9226-e32c7e4e4f8b.png
 
 Map: Blue= Museum, Red= Durlston Head Country Park, Green= Lulworth Cove
 
 ![alt txt][G1.sampling]
 
-[G1.sampling]:(https://user-images.githubusercontent.com/52965134/61301337-98846280-a7db-11e9-86a0-4da2282ae8fd.png)
+[G1.sampling]:https://user-images.githubusercontent.com/52965134/61301337-98846280-a7db-11e9-86a0-4da2282ae8fd.png
 
 
 ### G2 results (Stable)
 
 ![alt txt][G2.screeplot]
 
-[G2.screeplot]:(https://user-images.githubusercontent.com/52965134/61302441-adfa8c00-a7dd-11e9-8e26-b05bb96e64ee.png)
+[G2.screeplot]:https://user-images.githubusercontent.com/52965134/61302441-adfa8c00-a7dd-11e9-8e26-b05bb96e64ee.png
 
 ![alt txt][G2.pca]
 
-[G2.pca]:(https://user-images.githubusercontent.com/52965134/61303568-a76d1400-a7df-11e9-9db6-badebdbe2c5c.png)
+[G2.pca]:https://user-images.githubusercontent.com/52965134/61303568-a76d1400-a7df-11e9-9db6-badebdbe2c5c.png
 
 Map: Blue= Museum, Red=Havering Country Park, Green= Kemsing Access Land
 
@@ -290,18 +290,18 @@ Havering Country Park and Kemsing Access Land are modern Populations
 
 ![alt txt][G2.sampling]
 
-[G2.sampling]:(https://user-images.githubusercontent.com/52965134/61303745-ef8c3680-a7df-11e9-8e0c-342493a2e9d7.png)
+[G2.sampling]:https://user-images.githubusercontent.com/52965134/61303745-ef8c3680-a7df-11e9-8e0c-342493a2e9d7.png
 
 
 ### G3 results (Expanding)
 
 ![alt txt][G3.screeplot]
 
-[G3.screeplot]:(https://user-images.githubusercontent.com/52965134/61303868-24988900-a7e0-11e9-9ea7-59a9462ac3d8.png)
+[G3.screeplot]:https://user-images.githubusercontent.com/52965134/61303868-24988900-a7e0-11e9-9ea7-59a9462ac3d8.png
 
 ![alt txt][G3.pca]
 
-[G3.pca]:(https://user-images.githubusercontent.com/52965134/61304137-94a70f00-a7e0-11e9-8929-24230e598d37.png)
+[G3.pca]:https://user-images.githubusercontent.com/52965134/61304137-94a70f00-a7e0-11e9-8929-24230e598d37.png
 
 Map: Purple= Museum, Red=Brockham Quarry, Brown= Buckland Hills, Green= Chantry Hill, Turquiose- Cissbury Ring, Blue= Denbies Hillside, Pink= Newtimber Hill
 
@@ -309,8 +309,8 @@ Brockham Quarry, Buckland Hills, Chantry Hill, Cissbury Ring, Denbies Hillside a
 
 ![alt txt][G3.sampling]
 
-[G3.sampling]:(https://user-images.githubusercontent.com/52965134/61305083-19465d00-a7e2-11e9-9cef-b8f88c6cc170.png)
+[G3.sampling]:https://user-images.githubusercontent.com/52965134/61305083-19465d00-a7e2-11e9-9cef-b8f88c6cc170.png
 
 ![alt txt][G3.sampling1]
 
-[G3.sampling1]:(https://user-images.githubusercontent.com/52965134/61305176-45fa7480-a7e2-11e9-9383-e0623d9d121c.png)
+[G3.sampling1]:https://user-images.githubusercontent.com/52965134/61305176-45fa7480-a7e2-11e9-9383-e0623d9d121c.png
