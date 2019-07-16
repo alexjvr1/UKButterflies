@@ -190,3 +190,22 @@ coordinates = museum samples. Grid reference points are the two modern populatio
 ![alt_txt][C3.pca]
 
 [C3.pca]:https://user-images.githubusercontent.com/12142475/61146809-ce230600-a4d2-11e9-86d8-077f32def424.png
+
+
+### D1 results (contracting)
+
+![alt txt][D1.screeplot]
+
+[D1.screeplot]:https://user-images.githubusercontent.com/52965134/61298722-a1bf0080-a7d6-11e9-936a-54f775dc42ec.png
+
+![alt txt][D1.pca]
+
+[D1.pca]:https://user-images.githubusercontent.com/52965134/61298855-ddf26100-a7d6-11e9-9584-e03b06f165b7.png
+
+Map: Green= Museum, Red= Beaulieu Heath, Blue= Telegraph Hill, Pink= Turf Hill
+
+Baulieu Heathm Telegraph Hill, Turf Hill are all modern samples.
+
+![alt txt][D1.sampling]
+
+[D1.sampling]:(https://user-images.githubusercontent.com/52965134/61299182-856f9380-a7d7-11e9-91ee-9266c5583fad.png)
