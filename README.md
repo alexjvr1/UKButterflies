@@ -398,6 +398,16 @@ Nodes seem to get stuck on BlueCrystal. If a job looks like it's taking much lon
 This also happened when concatenating bcf files. 
 ```
 
+Scratch space
+```
+The standard scratch space is 1.8Gb per node. This gets filled up when running the full dataset (which includes the reseq data). There's alternative scratch space available. 
+Add 
+
+export TMPDIR=/local
+
+to .bashrc file in home directory
+```
+
 
 ### 03c. SNP filtering
 
@@ -469,8 +479,17 @@ vcftools --vcf 0003.vcf
 ```
 
 
+To see how many variants overlap with the annotated genome: 
 
+Modify the gff file if necessary. Bedtools doesn't like 0-based coordinates. Sam's code to turn 0 start coords into 1
+```
+awk -F $'\t' 'BEGIN {OFS = FS};{ if($4==0) {print $1,$2,$3,1,$5,$6,$7,$8,$9} else {print}}' ../RefGenome/RefGenome.gff > ../RefGenome/RefGenome.mod.gff 
+```
 
+And mask: 
+```
+bedtools subtract -header -a input.vcf -b ../RefGenome/RefGenome.mod.gff > input.masked.vcf
+```
 
 
 
