@@ -488,6 +488,7 @@ awk -F $'\t' 'BEGIN {OFS = FS};{ if($4==0) {print $1,$2,$3,1,$5,$6,$7,$8,$9} els
 
 And mask: 
 ```
+module load apps/bedtools2  
 bedtools subtract -header -a input.vcf -b ../RefGenome/RefGenome.mod.gff > input.masked.vcf
 ```
 
