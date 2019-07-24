@@ -103,7 +103,7 @@ tail(poplist)
 98 AAg-19-2016-40 Core.Bedfont Lakes Country Park   TQ078723 Mod.C
 
 ### read in vcf file
-## For very large files you'll have to convert the vcf to plink and read in the ped file
+## For very large files you'll have to convert the vcf to plink and read in the ped file. See above for keeping chromosome names. 
 ## Check that the number of indivs and loci make sense
 
 #C3 <- read.pcadapt("C3.isec.mus.mod.vcf", type="vcf") #The file was too big for this
