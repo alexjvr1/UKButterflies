@@ -337,3 +337,10 @@ Brockham Quarry, Buckland Hills, Chantry Hill, Cissbury Ring, Denbies Hillside a
 ![alt txt][G3.sampling1]
 
 [G3.sampling1]:https://user-images.githubusercontent.com/52965134/61305176-45fa7480-a7e2-11e9-9383-e0623d9d121c.png
+
+### Outlier Results
+*Declining and Stable Species*
+
+![alt txt][ExpSta.table]
+
+[ExpSta.table]:https://user-images.githubusercontent.com/52965134/63765050-274acb80-c8c0-11e9-8a79-2027b038aa71.png
