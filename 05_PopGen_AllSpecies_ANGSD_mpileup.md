@@ -163,6 +163,11 @@ Map: Green flags= Museum, Red = Modern
 ![alt_txt][C1.pca]
 
 [C1.pca]:https://user-images.githubusercontent.com/12142475/61144657-5acac580-a4cd-11e9-8208-2c39b9caecf2.png
+(https://github.com/alexjvr1/UKButterflies/files/3545550/G2.pcadapt.pvalues.pdf)
+
+![alt txt][C1.pvalues]
+
+[C1.pvalues]:https://github.com/alexjvr1/UKButterflies/files/3545585/C1.pcadapt.pvalues.pdf
 
 coordinates = museum samples. Grid reference points are the two modern populations. 
 ![alt_txt][C1.sampling]
@@ -180,6 +185,9 @@ coordinates = museum samples. Grid reference points are the two modern populatio
 
 [C2.pca]:https://user-images.githubusercontent.com/12142475/61146733-a0d65800-a4d2-11e9-9ad0-c218235e8490.png
 
+![alt txt]:[C2.pvalues]
+
+[C2.pvalues]:https://github.com/alexjvr1/UKButterflies/files/3545581/C2.pcadapt.pvalues.pdf
 
 ### C3 results (expanding)
 
@@ -202,6 +210,10 @@ coordinates = museum samples. Grid reference points are the two modern populatio
 
 [D1.pca]:https://user-images.githubusercontent.com/52965134/61298855-ddf26100-a7d6-11e9-9584-e03b06f165b7.png
 
+![alt txt][D1.pvalues]
+
+[D1.pvalues]:https://github.com/alexjvr1/UKButterflies/files/3545573/D1.pcadapt.pvalues.pdf
+
 Map: Green= Museum, Red= Beaulieu Heath, Blue= Telegraph Hill, Pink= Turf Hill
 
 Baulieu Heathm Telegraph Hill, Turf Hill are modern populations. 
@@ -220,6 +232,10 @@ Baulieu Heathm Telegraph Hill, Turf Hill are modern populations.
 ![alt txt][D2.pca]
 
 [D2.pca]:https://user-images.githubusercontent.com/52965134/61299461-121a5180-a7d8-11e9-8661-11dc304a9f6f.png
+
+![alt txt][D2.pvalues]
+
+[D2.pvalues]:https://github.com/alexjvr1/UKButterflies/files/3545568/D2.pcadapt.pvalues.pdf
 
 Map: Green= Museum, Red= Hemsbury, Blue= Stoke Woods
 
@@ -267,6 +283,10 @@ Carverel copse, Hadleigh Railway Walk, Martin Down NNR, Snapes Wood, Stour Wood 
 
 [G1.pca]:https://user-images.githubusercontent.com/52965134/61301140-3b88ac80-a7db-11e9-9226-e32c7e4e4f8b.png
 
+![alt txt][G1.pvalues
+
+[G1.pvalues]:https://github.com/alexjvr1/UKButterflies/files/3545564/G1.pcadapt.pvalues.pdf
+
 Map: Blue= Museum, Red= Durlston Head Country Park, Green= Lulworth Cove
 
 ![alt txt][G1.sampling]
@@ -283,6 +303,10 @@ Map: Blue= Museum, Red= Durlston Head Country Park, Green= Lulworth Cove
 ![alt txt][G2.pca]
 
 [G2.pca]:https://user-images.githubusercontent.com/52965134/61303568-a76d1400-a7df-11e9-9db6-badebdbe2c5c.png
+
+![alt txt][G2.pvalues]
+
+[G2.pvalues]:https://github.com/alexjvr1/UKButterflies/files/3545550/G2.pcadapt.pvalues.pdf
 
 Map: Blue= Museum, Red=Havering Country Park, Green= Kemsing Access Land
 
