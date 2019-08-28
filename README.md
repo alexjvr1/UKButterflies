@@ -520,7 +520,7 @@ ls *bam > bamfiles.mus.names
 
 ```
 
-4. Copy the script [04a_mapDamage_museum.sh]() to the mapped.reseq.mapdamage folder. Change the job name, the number of threads, and check the path to the reference genome. 
+4. Copy the script [04a_mapDamage_museum.sh](https://github.com/alexjvr1/UKButterflies/blob/master/04a_mapDamage_museum.sh) to the mapped.reseq.mapdamage folder. Change the job name, the number of threads, and check the path to the reference genome. 
 
 5. Submit to queue. 
 
