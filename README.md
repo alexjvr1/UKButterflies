@@ -495,13 +495,37 @@ bedtools subtract -header -a input.vcf -b ../RefGenome/RefGenome.mod.gff > input
 
 
 
+### 04. ANGSD pipeline
+
+a. MapDamage: re-calibrate bam files after correcting for Cytosine deamination anticipated in museum samples
+
+b. Downsample modern data: To create comparative datasets we downsample the modern data to have ~the same number of sequences (i.e. same depth) as the museum data) 
+
+c. ANGSD - call variants: pipeline for estimating variant likelihoods across all sites. 
 
 
+#### 04a. MapDamage
 
 
+[MapDamage2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3694634/) is a package used to estimate and correct for Cytosine deamination (or any other transition/transversion bias in the data). This is a problem anticipated for ancient DNA, and possibly for museum data. 
+
+1. Create a folder in the species directory called mapped.reseq.mapdamage. 
+
+2. Move all museum bam files to this folder. Use the concatenated files with reseq data included where available. Sample numbers should correspond to the total museum samples in the LibraryPrep spreadsheet. 
+
+3. Create a file listing all the bamfiles
+
+```
+ls *bam > bamfiles.mus.names
+
+```
+
+4. Copy the script [04a_mapDamage_museum.sh]() to the mapped.reseq.mapdamage folder. Change the job name, the number of threads, and check the path to the reference genome. 
+
+5. Submit to queue. 
 
 
-### 04. Analyses
+### 05. Analyses
 
 3.1. Estimate genetic diversity & population structure
 
