@@ -526,7 +526,7 @@ ls *bam > bamfiles.mus.names
 
 5. Submit to queue. 
 
-6. [Analyse output stats]()
+6. [Analyse output stats](https://github.com/alexjvr1/UKButterflies/blob/master/04a_MapDamageOutputs.md)
 
 
 
