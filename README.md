@@ -526,7 +526,7 @@ ls *bam > bamfiles.mus.names
 
 5. Submit to queue. 
 
-
+6. [Analyse output stats]()
 
 
 
