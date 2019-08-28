@@ -543,6 +543,8 @@ module load apps/samtools-1.8
 for i in $(ls results*/*flt.bam); do ls $i >> mus.flagstat.log && samtools flagstat $i >> mus.flagstat.log; done
 ```
 
+Do the same for the modern samples. 
+
 Enter these data in the "Rescaled.ProperlyPaired.Q20" column in the Velocity_MapingStatsPerSpecies_AJvR_20190604.xlsx sheet on Dropbox. Calculate the mean number of museum reads and the proportion of modern reads to downsample to. 
 
 Use the [04b_Downsample.sh](https://github.com/alexjvr1/UKButterflies/blob/master/04b_Downsample.sh) script to downsample the modern bam files. Remember to change the job name and the PROP variables and create the input file listing all the modern bams. 
