@@ -4,7 +4,7 @@
 # Last modified 11/07/2019 23:02
 ################################################################
 ## Downsample the number of reads in a bam file to the same coverage as in the museum samples
-## PROP = mean museum properly paired reads/ number of modern indiv's properply paired reads
+## PROP = mean museum properly paired reads/ number of modern indiv's properply paired reads. This is calculated in the VelocityMappingStatsPerSpecies_AJvR_20190604.xlsx file. Calculate mean number of reads in the museum bam files after filtering for Phred <20. Calculate proportion of modern reads to keep. 
 ## PROP input = column listing these proportions in the same order as the bam name list. 
 
 #PBS -N A1.Dnsmpl.1
