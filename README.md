@@ -529,6 +529,28 @@ ls *bam > bamfiles.mus.names
 6. [Analyse output stats](https://github.com/alexjvr1/UKButterflies/blob/master/04a_MapDamageOutputs.md)
 
 
+#### 04b. Downsample modern data
+
+Due to the difference in sample quality between museum and modern samples, mean coverage is much higher for the modern data. This may bias the confidence in variant calls downstream. To avoid this problem I will downsample the modern data to the same mean depth as the museum data. 
+
+First filter the bam files to include only reads with PHRED quality >20. 
+```
+
+
+```
+
+Use samtools flagstat to calculate the number of properly paired reads in the recalibrated and filtered museum files. 
+
+```
+
+```
+
+Enter these data in the "Rescaled.ProperlyPaired.Q20" column in the Velocity_MapingStatsPerSpecies_AJvR_20190604.xlsx sheet on Dropbox. Calculate the mean number of museum reads and the proportion of modern reads to downsample to. 
+
+Use the [04b_Downsample.sh](https://github.com/alexjvr1/UKButterflies/blob/master/04b_Downsample.sh) script to downsample the modern bam files. Remember to change the job name and the PROP variables and create the input file listing all the modern bams. 
+
+
+
 
 ### 05. Analyses
 
