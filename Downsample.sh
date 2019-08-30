@@ -44,6 +44,6 @@ printf "\n"
 #Remove reads to that proportion using PicardTools DownsampleSam
 java -jar /cm/shared/apps/Picard-2.20.0/picard.jar \
 DownsampleSam \
-I=${NAME}_cutadapt_filtered_R1.fastq.gz.bam.flt.bam \
+I=${NAME}.bam.flt.bam \
 O=${NAME}.Downsampled.bam \
 P=${PROP}
