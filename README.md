@@ -32,15 +32,36 @@ Inputs for each step should be submitted via the command line.
 
 ### 00. Quality control
 
-   #### *pipeline*
+We're using [fastQC](https://wiki.gacrc.uga.edu/wiki/FastQC) and [multiQC](https://multiqc.info) for an initial assessment of data quality. 
 
-00_fastqc_raw_museum.sh
+fastQC is installed on BlueCrystal, but multiQC needs to be installed locally: 
 
-00_fastqc_raw_modern.sh
+```
+#run in home directory on bluecrystal
 
-   #### *wrapper*
+module load languages/python-2.7.10
 
-parallel_fastqc_bcp3.sh
+pip install multiqc
+```
+
+1. Navigate to the folder with all the raw data. 
+
+2. Make sure the raw R1 and R2 files are all in one folder (or set the paths in the script/names file). 
+
+3. create an R1.names and R2.names file listing all the forward and reverse reads. 
+
+4. edit the fastQC script [00_fastQC_ARRAY.sh](): change the job name and the number of array jobs (to the number of indivs in the folder). 
+
+5. Run the fastQC script (qsub 00_fastQC_ARRAY.sh). You can check on the job progress by looking at the output files or using "qstat -u username -t"
+
+6. Once this is complete use multiQC to concatenate all the output files: 
+
+```
+multiQC .
+```
+
+This will create a combined html to compare outputs across all samples. It also creates a folder (multiqc_data) with all the parsable info in txt files. 
+
 
 
 
