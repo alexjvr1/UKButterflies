@@ -59,6 +59,12 @@ Plebejus_argus
 
 Thymalicus_acteon
 
+Erebia_epiphron
+
+Erebia_aethiops
+
+RNA_work_A.agestis.zip  - from James Buckley's PhD work. 
+
 
 ##### */projects/Adaptation_in_rainforest_flies/velocity_project/*
 
@@ -67,6 +73,8 @@ rawseqModern1_2018
 rawseqMuseum2_2019
 
 rawseqMuseum3_July2019
+
+rawseqModern3.2_Aug2019
 
 A1_Lymantria_monacha
 
