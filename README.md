@@ -50,7 +50,7 @@ pip install multiqc
 
 3. create an R1.names and R2.names file listing all the forward and reverse reads. 
 
-4. edit the fastQC script [00_fastQC_ARRAY.sh](): change the job name and the number of array jobs (to the number of indivs in the folder). 
+4. edit the fastQC script [00_fastQC_ARRAY.sh](https://github.com/alexjvr1/UKButterflies/blob/master/00_fastQC_ARRAY.sh): change the job name and the number of array jobs (to the number of indivs in the folder). 
 
 5. Run the fastQC script (qsub 00_fastQC_ARRAY.sh). You can check on the job progress by looking at the output files or using "qstat -u username -t"
 
