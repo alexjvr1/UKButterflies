@@ -577,7 +577,9 @@ Use the [04b_Downsample.sh](https://github.com/alexjvr1/UKButterflies/blob/maste
 When all the samples have been pre-processed we can estimate genotype likelihoods using ANGSD. 
 
 First we'll estimate the site frequency spectrum for each population separately. In this first step we'll also filter sequences for quality. 
-This step is run as an array by splitting the genome up into 100 regions. 
+This step is run as an array by splitting the genome up into 100 regions. This can be run in less than 1 hour, depending on the size of the regions. I need to optimise this step. 
+
+A second part to this is the merging of all the separate regions. This takes 2-4 hours and cannot be multi-threaded. 
 
 Next we'll intersect the datasets from museum and modern populations to include only loci found in both datasets. 
 
