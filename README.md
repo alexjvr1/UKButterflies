@@ -572,6 +572,21 @@ Use the [04b_Downsample.sh](https://github.com/alexjvr1/UKButterflies/blob/maste
 
 
 
+#### 04c. Estimate Genotype Likelihoods
+
+When all the samples have been pre-processed we can estimate genotype likelihoods using ANGSD. 
+
+First we'll estimate the site frequency spectrum for each population separately. In this first step we'll also filter sequences for quality. 
+This step is run as an array by splitting the genome up into 100 regions. 
+
+Next we'll intersect the datasets from museum and modern populations to include only loci found in both datasets. 
+
+Then we'll re-estimate the SFS using only these sites. 
+
+Finally we can calculate Tajima's D and Fst for these sites. 
+
+
+
 
 ### 05. Analyses
 
