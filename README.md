@@ -64,6 +64,11 @@ This will create a combined html to compare outputs across all samples. It also 
 
 
 
+To remove numbers from the start of the museum sample names: 
+```
+for i in $(ls *gz); do mv "$i" "${i#${i%%[!0-9-]*}}"; done
+```
+
 
 ### 01. Trimming adapter and poor quality sequence
 
