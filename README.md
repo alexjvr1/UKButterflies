@@ -132,7 +132,7 @@ Reseq data are kept in the following folders:
 ```
 00_raw_data_museum2
 01a_museum2_cutadapt_reads
-01a_mus.concat_cutadapt_reads  ## concatednated museum1 and museum2
+01a_mus.concat_cutadapt_reads  ## concatenated museum1 and museum2
 02a_museum2_mapped  ##see below
 ```
 
