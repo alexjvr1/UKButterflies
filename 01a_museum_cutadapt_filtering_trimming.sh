@@ -13,7 +13,7 @@
 
 
 
-/panfs/panasas01/bisc/aj18951/bristol-velocity/AJvR_VelocityPipeline/tools/01a_parallel_cutadapt_bluecp3.sh \
+/newhome/bzzjrb/bristol-velocity/AJvR_VelocityPipeline/tools/01a_parallel_cutadapt_bluecp3.sh \
 -i 00_raw_reads_museum1 \
 -o 01a_museum_cutadapt_reads -n 1 -t 8 -m 8 -ph 33 \
 -fwad1 AGATCGGAAGAGCACACGTCTGAACTCCAGTC -rvad1 AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT \
